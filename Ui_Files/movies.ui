@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>804</width>
+    <height>604</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="navigationBG" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>171</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#navigationBG {
+background-color: #ccdde8;
+
+}
+
+</string>
+    </property>
+    <widget class="QLabel" name="systemLabel">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>15</y>
+       <width>71</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#systemLabel {
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+color: #034488;
+}</string>
+     </property>
+     <property name="text">
+      <string>Movie
+Ticketing
+System</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/icon.png</normaloff>../img/icon.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Movies</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/movies.png</normaloff>../img/movies.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tickets</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/tickets.png</normaloff>../img/tickets.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>230</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Admin</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/admin.png</normaloff>../img/admin.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>270</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Crew</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/crew.png</normaloff>../img/crew.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>430</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Logout</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/logout.png</normaloff>../img/logout.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="mainBG" native="true">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>0</y>
+      <width>651</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#mainBG {
+background-color: #fffcf6;
+
+}
+
+</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>241</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../img/moviesHeader.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addTicket">
+     <property name="geometry">
+      <rect>
+       <x>460</x>
+       <y>60</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/addticket.png</normaloff>../img/addticket.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="editTicket">
+     <property name="geometry">
+      <rect>
+       <x>500</x>
+       <y>60</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/editTicket.png</normaloff>../img/editTicket.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="deleteTicket">
+     <property name="geometry">
+      <rect>
+       <x>537</x>
+       <y>60</y>
+       <width>41</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/deleteTicket.png</normaloff>../img/deleteTicket.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>611</width>
+       <height>491</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#stackedWidget{
+background-color: #178fd6;
+}</string>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QLabel" name="movieTitle_5">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>363</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Arial&quot;;
+color: #034488;</string>
+       </property>
+       <property name="text">
+        <string>Movie Title</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieTitle_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>126</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Arial&quot;;
+color: #034488;</string>
+       </property>
+       <property name="text">
+        <string>Movie Title</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieDesc_6">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>393</y>
+         <width>121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;movieTitle&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;50&lt;/x&gt;
+     &lt;y&gt;250&lt;/y&gt;
+     &lt;width&gt;71&lt;/width&gt;
+     &lt;height&gt;16&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;Movie Title&lt;/string&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;alignment&quot;&gt;
+    &lt;set&gt;Qt::AlignCenter&lt;/set&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="movieBG_5" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>253</y>
+         <width>141</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#movieBG_5{
+background-color: #edece8;
+border: 1px white;
+border-radius: 20px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="movieBG_6" native="true">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>250</y>
+         <width>141</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#movieBG_6{
+background-color: #edece8;
+border: 1px white;
+border-radius: 20px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieTitle_6">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>366</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Arial&quot;;
+color: #034488;</string>
+       </property>
+       <property name="text">
+        <string>Movie Title</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="movieBG_3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>13</y>
+         <width>141</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#movieBG_3{
+background-color: #edece8;
+border: 1px white;
+border-radius: 20px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieTitle">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>129</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Arial&quot;;
+color: #034488;</string>
+       </property>
+       <property name="text">
+        <string>Movie Title</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieTitle_4">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>363</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Arial&quot;;
+color: #034488;</string>
+       </property>
+       <property name="text">
+        <string>Movie Title</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieImage">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>16</y>
+         <width>101</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../img/icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieDesc_4">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>390</y>
+         <width>121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;movieTitle&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;50&lt;/x&gt;
+     &lt;y&gt;250&lt;/y&gt;
+     &lt;width&gt;71&lt;/width&gt;
+     &lt;height&gt;16&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;Movie Title&lt;/string&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;alignment&quot;&gt;
+    &lt;set&gt;Qt::AlignCenter&lt;/set&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieDesc_5">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>390</y>
+         <width>121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;movieTitle&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;50&lt;/x&gt;
+     &lt;y&gt;250&lt;/y&gt;
+     &lt;width&gt;71&lt;/width&gt;
+     &lt;height&gt;16&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;Movie Title&lt;/string&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;alignment&quot;&gt;
+    &lt;set&gt;Qt::AlignCenter&lt;/set&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="movieBG" native="true">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>16</y>
+         <width>141</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#movieBG{
+background-color: #edece8;
+border: 1px white;
+border-radius: 20px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieImage_3">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>13</y>
+         <width>101</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../img/icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieImage_6">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>253</y>
+         <width>101</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../img/icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieDesc_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>153</y>
+         <width>121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;movieTitle&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;50&lt;/x&gt;
+     &lt;y&gt;250&lt;/y&gt;
+     &lt;width&gt;71&lt;/width&gt;
+     &lt;height&gt;16&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;Movie Title&lt;/string&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;alignment&quot;&gt;
+    &lt;set&gt;Qt::AlignCenter&lt;/set&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieTitle_3">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>126</y>
+         <width>121</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;Arial&quot;;
+color: #034488;</string>
+       </property>
+       <property name="text">
+        <string>Movie Title</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieDesc_3">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>153</y>
+         <width>121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;movieTitle&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;50&lt;/x&gt;
+     &lt;y&gt;250&lt;/y&gt;
+     &lt;width&gt;71&lt;/width&gt;
+     &lt;height&gt;16&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;Movie Title&lt;/string&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;alignment&quot;&gt;
+    &lt;set&gt;Qt::AlignCenter&lt;/set&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QWidget" name="movieBG_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>13</y>
+         <width>141</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#movieBG_2{
+background-color: #edece8;
+border: 1px white;
+border-radius: 20px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="movieBG_4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>420</x>
+         <y>250</y>
+         <width>141</width>
+         <height>221</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#movieBG_4{
+background-color: #edece8;
+border: 1px white;
+border-radius: 20px;
+}</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieDesc">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>156</y>
+         <width>121</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;widget name=&quot;__qt_fake_top_level&quot;&gt;
+  &lt;widget class=&quot;QLabel&quot; name=&quot;movieTitle&quot;&gt;
+   &lt;property name=&quot;geometry&quot;&gt;
+    &lt;rect&gt;
+     &lt;x&gt;50&lt;/x&gt;
+     &lt;y&gt;250&lt;/y&gt;
+     &lt;width&gt;71&lt;/width&gt;
+     &lt;height&gt;16&lt;/height&gt;
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;text&quot;&gt;
+    &lt;string&gt;Movie Title&lt;/string&gt;
+   &lt;/property&gt;
+   &lt;property name=&quot;alignment&quot;&gt;
+    &lt;set&gt;Qt::AlignCenter&lt;/set&gt;
+   &lt;/property&gt;
+  &lt;/widget&gt;
+ &lt;/widget&gt;
+ &lt;resources/&gt;
+&lt;/ui&gt;
+</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieImage_2">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>13</y>
+         <width>101</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../img/icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieImage_4">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>250</y>
+         <width>101</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../img/icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="movieImage_5">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>250</y>
+         <width>101</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../img/icon.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>movieBG_4</zorder>
+      <zorder>movieBG_6</zorder>
+      <zorder>movieBG_5</zorder>
+      <zorder>movieBG_2</zorder>
+      <zorder>movieBG</zorder>
+      <zorder>movieTitle_5</zorder>
+      <zorder>movieTitle_2</zorder>
+      <zorder>movieDesc_6</zorder>
+      <zorder>movieTitle_6</zorder>
+      <zorder>movieBG_3</zorder>
+      <zorder>movieTitle</zorder>
+      <zorder>movieTitle_4</zorder>
+      <zorder>movieImage</zorder>
+      <zorder>movieDesc_4</zorder>
+      <zorder>movieDesc_5</zorder>
+      <zorder>movieImage_3</zorder>
+      <zorder>movieImage_6</zorder>
+      <zorder>movieDesc_2</zorder>
+      <zorder>movieTitle_3</zorder>
+      <zorder>movieDesc_3</zorder>
+      <zorder>movieDesc</zorder>
+      <zorder>movieImage_2</zorder>
+      <zorder>movieImage_4</zorder>
+      <zorder>movieImage_5</zorder>
+     </widget>
+     <widget class="QWidget" name="page_3"/>
+     <widget class="QWidget" name="page_2"/>
+    </widget>
+    <zorder>stackedWidget</zorder>
+    <zorder>label</zorder>
+    <zorder>addTicket</zorder>
+    <zorder>editTicket</zorder>
+    <zorder>deleteTicket</zorder>
+   </widget>
+   <zorder>mainBG</zorder>
+   <zorder>navigationBG</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
