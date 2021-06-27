@@ -2,6 +2,7 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
+from movie import MovieScreen
 import sqlite3
 
 
@@ -233,10 +234,10 @@ class AdminSignup(QMainWindow):
             widget.setCurrentIndex(widget.currentIndex() + 1)
 
 
-class MovieScreen(QMainWindow):
-    def __init__(self):
-        super(MovieScreen, self).__init__()
-        loadUi("movies.ui", self)
+# class MovieScreen(QMainWindow):
+#     def __init__(self):
+#         super(MovieScreen, self).__init__()
+#         loadUi("movies.ui", self)
 
 
 # main
