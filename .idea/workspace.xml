@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87cf92fc-496e-4383-8eb8-c7c33b82c26d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Ui_Files/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MovieTicketingSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/MovieTicketingSystem.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/MovieTicketingSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/MovieTicketingSystem.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ui_Files/crew_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/crew_data.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ui_Files/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ddl.py" beforeDir="false" afterPath="$PROJECT_DIR$/ddl.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +51,7 @@
       <recent name="C:\Users\Admin\Documents\GitHub\Movie-Ticketing\Ui_Files" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.db">
     <configuration name="database (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Movie-Ticketing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,8 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.db" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.database (1)" />
         <item itemvalue="Python.database" />
         <item itemvalue="Python.movie (1)" />
@@ -213,22 +212,22 @@
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
     <state x="1946" y="-160" key="FileChooserDialogImpl/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624822365902" />
-    <state width="1601" height="233" key="GridCell.Tab.0.bottom" timestamp="1624825146938">
+    <state width="1601" height="233" key="GridCell.Tab.0.bottom" timestamp="1624826244909">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624825146938" />
-    <state width="1601" height="233" key="GridCell.Tab.0.center" timestamp="1624825146938">
+    <state width="1601" height="233" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624826244909" />
+    <state width="1601" height="233" key="GridCell.Tab.0.center" timestamp="1624826244909">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.center/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624825146938" />
-    <state width="1601" height="233" key="GridCell.Tab.0.left" timestamp="1624825146938">
+    <state width="1601" height="233" key="GridCell.Tab.0.center/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624826244909" />
+    <state width="1601" height="233" key="GridCell.Tab.0.left" timestamp="1624826244909">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.left/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624825146938" />
-    <state width="1601" height="233" key="GridCell.Tab.0.right" timestamp="1624825146938">
+    <state width="1601" height="233" key="GridCell.Tab.0.left/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624826244909" />
+    <state width="1601" height="233" key="GridCell.Tab.0.right" timestamp="1624826244909">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624825146938" />
+    <state width="1601" height="233" key="GridCell.Tab.0.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624826244909" />
     <state width="1601" height="288" key="GridCell.Tab.1.bottom" timestamp="1624818324756">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
@@ -249,9 +248,9 @@
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
     <state x="1862" y="-91" key="com.intellij.ide.util.TipDialog/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624823967726" />
-    <state x="164" y="16" width="1137" height="619" maximized="true" key="dock-window-1" timestamp="1624823911568">
+    <state x="209" y="84" width="1137" height="619" key="dock-window-1" timestamp="1624826372638">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="164" y="16" width="1137" height="619" maximized="true" key="dock-window-1/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624823911568" />
+    <state x="209" y="84" width="1137" height="619" key="dock-window-1/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624826372638" />
   </component>
 </project>
