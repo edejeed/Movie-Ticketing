@@ -3,7 +3,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from MovieItem import MovieItem
-from item import Ui_Form
+
 import sqlite3
 
 class MovieScreen(QMainWindow):
