@@ -341,7 +341,7 @@ background-color: #178fd6;
 }</string>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QWidget" name="gridLayoutWidget">
@@ -366,8 +366,52 @@ background-color: #178fd6;
        </layout>
       </widget>
      </widget>
-     <widget class="QWidget" name="page_3"/>
-     <widget class="QWidget" name="page_2"/>
+     <widget class="QWidget" name="page_2">
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>561</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_3">
+      <widget class="QWidget" name="gridLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>561</width>
+         <height>491</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
     </widget>
     <widget class="QPushButton" name="prevButton">
      <property name="geometry">
