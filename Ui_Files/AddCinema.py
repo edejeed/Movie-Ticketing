@@ -8,14 +8,15 @@ from MessageBox import MessageBox
 class BookTicket(QMainWindow):
     def __init__(self):
         super(BookTicket, self).__init__()
-        loadUi("add_genre.ui", self)
-        self.addGenreButton.clicked.connect(self.__addGenreClicked)
+        loadUi("add_cinema.ui", self)
+        self.addCinemaButton.clicked.connect(self.__addCinemaClicked)
 
-    def __addGenreClicked(self):
-        if self.genreName.text() != "":
-            AddGenre(self.genreName.text())
-            MessageBox.showInformationMessage("Genre added.", "Success")
-            self.genreName.setText("")
+    def __addCinemaClicked(self):
+        if self.cinemaName.text() != "" and self.capacity.value() != 0:
+            AddCinema(self.cinemaName.text(), self.capacity.value())
+            MessageBox.showInformationMessage("Cinema added.", "Success")
+            self.cinemaName.setText("")
+            self.capacity.setValue(0)
         else:
             MessageBox.showErrorMessage("Please accomplish all fields.", "Error")
 

@@ -157,7 +157,7 @@ border: 1px white;
 border-radius: 20px;
 }</string>
     </property>
-    <widget class="QSpinBox" name="noOfTickets">
+    <widget class="QSpinBox" name="capacity">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -167,7 +167,7 @@ border-radius: 20px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#noOfTickets{
+      <string notr="true">#capacity{
 border: 1px white;
 }</string>
      </property>

@@ -31,6 +31,14 @@ def AddGenre(genre):
     conn.commit()
     conn.close()
 
+def AddCinema(name, capacity):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"INSERT INTO Cinema(name, capacity) VALUES(?,?)", (name,capacity))
+
+    conn.commit()
+    conn.close()
+
 def GetMovieList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
