@@ -6,119 +6,186 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>804</width>
+    <height>599</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="navigationBG" native="true">
+   <widget class="QWidget" name="background" native="true">
     <property name="geometry">
      <rect>
-      <x>-30</x>
-      <y>-30</y>
-      <width>921</width>
-      <height>751</height>
+      <x>0</x>
+      <y>0</y>
+      <width>811</width>
+      <height>611</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(103, 160, 213);
+     <string notr="true">#background {
+background-color: #178fd6;
 
-
+}
 
 </string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>350</x>
-       <y>80</y>
-       <width>231</width>
-       <height>91</height>
+       <x>380</x>
+       <y>100</y>
+       <width>61</width>
+       <height>51</height>
       </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 50pt &quot;Bebas Neue&quot;;
-
-</string>
      </property>
      <property name="text">
-      <string>LOG IN</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../../../../Desktop/MOVIE TICKETING SYSTEM/img/logintxt.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="admin_user">
+    <widget class="QWidget" name="rect" native="true">
      <property name="geometry">
       <rect>
-       <x>310</x>
-       <y>220</y>
-       <width>261</width>
+       <x>260</x>
+       <y>190</y>
+       <width>291</width>
        <height>41</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color:rgba(0,0,0,0);
-border: none;
-border-bottom:2px solid rgb(0, 0, 0);
-color:rgba(255,255,255,230);
-padding-bottom:7px;</string>
-     </property>
-     <property name="placeholderText">
-      <string>username</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="admin_pass">
-     <property name="geometry">
-      <rect>
-       <x>310</x>
-       <y>320</y>
-       <width>261</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:rgba(0,0,0,0);
-border: none;
-border-bottom:2px solid rgb(0, 0, 0);
-color:rgba(255,255,255,230);
-padding-bottom:7px;</string>
-     </property>
-     <property name="placeholderText">
-      <string>password</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="enter">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>440</y>
-       <width>201</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton{
+      <string notr="true">#rect{
 background-color: white;
-text-size: 10px;
-border-radius: 10px;
-}
-
-QPushButton:hover{
-	color:rgb(73, 147, 221);
-	background-color: rgb(13, 27, 38);
+border: 1px white;
+border-radius: 20px;
+}</string>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Desktop/MOVIE TICKETING SYSTEM/img/username.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="username">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>5</y>
+        <width>221</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#username{
+border: TRANSPARENT;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Username</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="rect_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>250</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#rect_2{
+background-color: white;
+border: 1px white;
+border-radius: 20px;
+}</string>
+     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>5</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>../../../../Desktop/MOVIE TICKETING SYSTEM/img/password.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="password">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>5</y>
+        <width>221</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#password{
+border: TRANSPARENT;
+}</string>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="loginButton">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>320</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#loginButton{
+background-color: #034488;
+color: white;
+	font: 11pt &quot;MS Shell Dlg 2&quot;;
+border: 1px solid white;
+border-radius: 20px;
 }</string>
      </property>
      <property name="text">
-      <string>Log in</string>
+      <string>Log In</string>
      </property>
     </widget>
     <widget class="QPushButton" name="signUpButton">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>480</y>
-       <width>201</width>
+       <x>270</x>
+       <y>380</y>
+       <width>281</width>
        <height>31</height>
       </rect>
      </property>
@@ -145,18 +212,27 @@ color: rgb(0, 0, 255);
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="mainBG" native="true">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>0</y>
+      <width>651</width>
+      <height>611</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#mainBG {
+background-color: #fffcf6;
+
+}
+
+</string>
+    </property>
+   </widget>
+   <zorder>mainBG</zorder>
+   <zorder>background</zorder>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
