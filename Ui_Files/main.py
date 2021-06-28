@@ -82,7 +82,7 @@ class CrewLogin(QMainWindow):
             #         x = msg.exec_()
 
             res = Authenticate(user, password)
-            
+
             if res:
                 moviescreen = MovieScreen()
                 widget.addWidget(moviescreen)
@@ -165,12 +165,12 @@ class AdminLogin(QMainWindow):
     def __init__(self):
         super(AdminLogin, self).__init__()
         loadUi("admin_login.ui", self)
-        self.admin_pass.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.enter.clicked.connect(self.loginfunction)
+        self.password.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.loginButton.clicked.connect(self.loginfunction)
 
     def loginfunction(self):
-        user = self.admin_user.text()
-        password = self.admin_pass.text()
+        user = self.username.text()
+        password = self.password.text()
 
         msg = QMessageBox()
         msg.setWindowTitle("Error")

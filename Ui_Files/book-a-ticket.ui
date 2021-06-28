@@ -255,21 +255,6 @@ border-radius: 20px;
      <string>No. of tickets</string>
     </property>
    </widget>
-   <widget class="QDateTimeEdit" name="schedule">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>270</y>
-      <width>231</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#schedule{
-border: 1px white;
-}</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="rect4" native="true">
     <property name="geometry">
      <rect>
@@ -286,6 +271,27 @@ border: 1px white;
 border-radius: 20px;
 }</string>
     </property>
+    <widget class="QComboBox" name="schedule">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>231</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#schedule{
+border: 1px white;
+}</string>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <property name="currentText">
+      <string/>
+     </property>
+    </widget>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
@@ -307,7 +313,6 @@ border-radius: 20px;
    <zorder>rect3</zorder>
    <zorder>bookTicketButton</zorder>
    <zorder>label</zorder>
-   <zorder>schedule</zorder>
    <zorder>label_2</zorder>
   </widget>
  </widget>
