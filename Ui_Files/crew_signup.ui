@@ -33,9 +33,9 @@
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>350</x>
+       <x>310</x>
        <y>80</y>
-       <width>161</width>
+       <width>261</width>
        <height>91</height>
       </rect>
      </property>
@@ -45,7 +45,7 @@
 </string>
      </property>
      <property name="text">
-      <string>LOG IN</string>
+      <string>SIGN UP</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="crew_user">
@@ -131,6 +131,37 @@ QPushButton:hover{
      </property>
      <property name="text">
       <string>Create Account</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="loginButton">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>540</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+background-color: white;
+text-size: 10px;
+border-radius: 10px;
+}
+
+QPushButton:hover{
+	color:rgb(73, 147, 221);
+	background-color: rgb(13, 27, 38);
+}
+#loginButton {
+background-color: TRANSPARENT;
+}
+#loginButton:hover{
+color: rgb(0, 0, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>or log in</string>
      </property>
     </widget>
    </widget>
