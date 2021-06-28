@@ -3,8 +3,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from movie import MovieScreen
-import database
-
+from db import *
 
 class WelcomeScreen(QMainWindow):
     def __init__(self):
@@ -57,32 +56,44 @@ class CrewLogin(QMainWindow):
         user = self.crew_user.text()
         password = self.crew_pass.text()
 
-        try:
-            if len(user) == 0 or len(password) == 0:
-                msg = QMessageBox()
-                msg.setWindowTitle("Error")
-                msg.setText("Please Input Informations!")
-                x = msg.exec_()
-            else:
-                conn = sqlite3.connect("crew_data.db")
-                cur = conn.cursor()
-                cur.execute("SELECT * FROM crew_data WHERE username=?", (user,))
-                rows = cur.fetchall()
-                for row in rows:
-                    if user == row[0] and password == row[1]:
-                        moviescreen = MovieScreen()
-                        widget.addWidget(moviescreen)
-                        widget.setCurrentIndex(widget.currentIndex() + 1)
-                    else:
-                        msg = QMessageBox()
-                        msg.setWindowTitle("Error")
-                        msg.setText("The password you’ve entered is incorrect!")
-                        x = msg.exec_()
-        except:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error")
-            msg.setText("The username you entered isn’t connected to an account!")
+        msg = QMessageBox()
+        msg.setWindowTitle("Error")
+
+        if len(user) == 0 or len(password) == 0:
+            msg.setText("Please Input Informations!")
             x = msg.exec_()
+        else:
+            # conn = sqlite3.connect("crew_data.db")
+            # cur = conn.cursor()
+            # cur.execute("SELECT * FROM crew_data WHERE username=?", (user,))
+            # rows = cur.fetchall()
+
+            
+            
+            # for row in rows:
+            #     if user == row[0] and password == row[1]:
+            #         moviescreen = MovieScreen()
+            #         widget.addWidget(moviescreen)
+            #         widget.setCurrentIndex(widget.currentIndex() + 1)
+            #     else:
+            #         msg = QMessageBox()
+            #         msg.setWindowTitle("Error")
+            #         msg.setText("The password you’ve entered is incorrect!")
+            #         x = msg.exec_()
+
+            res = Authenticate(user, password)
+            
+            if res:
+                moviescreen = MovieScreen()
+                widget.addWidget(moviescreen)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
+            else:
+                msg.setText("Incorrect username or password")
+                x = msg.exec_()
+        # except Exception as E:
+            
+        #     msg.setText("The username you entered isn’t connected to an account!")
+        #     x = msg.exec_()
 
 
 class CrewSignup(QMainWindow):
@@ -161,32 +172,41 @@ class AdminLogin(QMainWindow):
         user = self.admin_user.text()
         password = self.admin_pass.text()
 
-        try:
-            if len(user) == 0 or len(password) == 0:
-                msg = QMessageBox()
-                msg.setWindowTitle("Error")
-                msg.setText("Please Input Informations!")
-                x = msg.exec_()
-            else:
-                conn = sqlite3.connect("admin_data.db")
-                cur = conn.cursor()
-                cur.execute("SELECT * FROM admin_data WHERE username=?", (user,))
-                rows = cur.fetchall()
-                for row in rows:
-                    if user == row[0] and password == row[1]:
-                        moviescreen = MovieScreen()
-                        widget.addWidget(moviescreen)
-                        widget.setCurrentIndex(widget.currentIndex() + 1)
-                    else:
-                        msg = QMessageBox()
-                        msg.setWindowTitle("Error")
-                        msg.setText("The password you’ve entered is incorrect!")
-                        x = msg.exec_()
-        except:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error")
-            msg.setText("The username you entered isn’t connected to an account!")
+        msg = QMessageBox()
+        msg.setWindowTitle("Error")
+
+        
+        if len(user) == 0 or len(password) == 0:
+            msg.setText("Please Input Informations!")
             x = msg.exec_()
+        else:
+            # conn = sqlite3.connect("admin_data.db")
+            # cur = conn.cursor()
+            # cur.execute("SELECT * FROM admin_data WHERE username=?", (user,))
+            # rows = cur.fetchall()
+            # for row in rows:
+            #     if user == row[0] and password == row[1]:
+            #         moviescreen = MovieScreen()
+            #         widget.addWidget(moviescreen)
+            #         widget.setCurrentIndex(widget.currentIndex() + 1)
+            #     else:
+            #         msg = QMessageBox()
+            #         msg.setWindowTitle("Error")
+            #         msg.setText("The password you’ve entered is incorrect!")
+            #         x = msg.exec_()
+            res = Authenticate(user, password, 1)
+
+            if res:
+                moviescreen = MovieScreen()
+                widget.addWidget(moviescreen)
+                widget.setCurrentIndex(widget.currentIndex() + 1)
+            else: 
+                msg.setText("Incorrect username or password.")
+                x = msg.exec_()
+        # except Exception as E:
+        #     print(E)
+        #     msg.setText("The username you entered isn’t connected to an account!")
+        #     x = msg.exec_()
 
 
 class AdminSignup(QMainWindow):
