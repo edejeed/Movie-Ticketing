@@ -122,7 +122,7 @@ border: 1px white;
 border-radius: 20px;
 }</string>
     </property>
-    <widget class="QLineEdit" name="cinemaName">
+    <widget class="QLineEdit" name="genreName">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -132,7 +132,7 @@ border-radius: 20px;
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#cinemaName{
+      <string notr="true">#genreName{
 border: TRANSPARENT;
 }</string>
      </property>
