@@ -55,6 +55,14 @@ def AddMovieGenre(movieID, genreID):
     conn.commit()
     conn.close()
 
+def UpdateGenre(id, genre):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"UPDATE Genre SET genre = ? WHERE genreID = ?", (genre,id))
+
+    conn.commit()
+    conn.close()
+
 def GetGenreList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
@@ -92,5 +100,11 @@ def getScheduleList(movieID, cinemaID):
 
     return res
 
+def DeleteGenre(id):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"DELETE FROM Genre WHERE genreID = ?", (id,))
 
-
+    conn.commit()
+    conn.close()
+    
