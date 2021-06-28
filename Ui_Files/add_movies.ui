@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>804</width>
-    <height>604</height>
+    <height>679</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>171</width>
-      <height>611</height>
+      <height>681</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -120,7 +120,7 @@ System</string>
       <x>160</x>
       <y>0</y>
       <width>651</width>
-      <height>611</height>
+      <height>681</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -171,7 +171,7 @@ background-color: #fffcf6;
       <rect>
        <x>50</x>
        <y>260</y>
-       <width>171</width>
+       <width>101</width>
        <height>31</height>
       </rect>
      </property>
@@ -179,7 +179,7 @@ background-color: #fffcf6;
       <string notr="true">font: 15pt &quot;Times New Roman&quot;;</string>
      </property>
      <property name="text">
-      <string>Movie Description :</string>
+      <string>Synopsis:</string>
      </property>
     </widget>
     <widget class="QWidget" name="widget" native="true">
@@ -188,7 +188,7 @@ background-color: #fffcf6;
        <x>20</x>
        <y>120</y>
        <width>591</width>
-       <height>451</height>
+       <height>541</height>
       </rect>
      </property>
      <property name="styleSheet">
@@ -199,7 +199,7 @@ background-color: #fffcf6;
        <rect>
         <x>200</x>
         <y>50</y>
-        <width>131</width>
+        <width>331</width>
         <height>31</height>
        </rect>
       </property>
@@ -210,8 +210,8 @@ background-color: #fffcf6;
      <widget class="QPushButton" name="save">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>340</y>
+        <x>440</x>
+        <y>450</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -248,8 +248,8 @@ QPushButton:hover{
      <widget class="QPushButton" name="back">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>390</y>
+        <x>440</x>
+        <y>490</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -269,24 +269,11 @@ QPushButton:hover{
        <string>B A C K</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="description">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>140</y>
-        <width>271</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:rgb(255, 255, 255)</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>220</y>
+        <y>270</y>
         <width>171</width>
         <height>31</height>
        </rect>
@@ -298,48 +285,30 @@ QPushButton:hover{
        <string>Movie Genre :</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>310</y>
+        <width>381</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
+     <widget class="QPlainTextEdit" name="synopsis">
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>220</y>
-        <width>121</width>
-        <height>31</height>
+        <y>140</y>
+        <width>331</width>
+        <height>101</height>
        </rect>
       </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:rgb(255, 255, 255)</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Action</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Adventure</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Comedy</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Horror</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Romance</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Thriller</string>
-       </property>
-      </item>
      </widget>
     </widget>
     <zorder>widget</zorder>

@@ -15,7 +15,7 @@ def Authenticate(user, password, priv=0):
 
     conn.close()
 
-def AddBooking(movie, cinema, amount):
+def AddNewBooking(movie, cinema, amount):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
     cur.execute(f"INSERT INTO Booking VALUES(?,?,?)", (movie,cinema,amount))
@@ -23,7 +23,7 @@ def AddBooking(movie, cinema, amount):
     conn.commit()
     conn.close()
 
-def AddGenre(genre):
+def AddNewGenre(genre):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
     cur.execute(f"INSERT INTO Genre(genre) VALUES(?)", (genre,))
@@ -31,13 +31,38 @@ def AddGenre(genre):
     conn.commit()
     conn.close()
 
-def AddCinema(name, capacity):
+def AddNewCinema(name, capacity):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
     cur.execute(f"INSERT INTO Cinema(name, capacity) VALUES(?,?)", (name,capacity))
 
     conn.commit()
     conn.close()
+
+def AddNewMovie(title, synopsis):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"INSERT INTO Movie(title, synopsis) VALUES(?,?)", (title,synopsis))
+
+    conn.commit()
+    conn.close()
+
+def AddMovieGenre(movieID, genreID):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"INSERT INTO MovieGenre(movieID, movieGenre) VALUES(?,?)", (movieID,genreID))
+
+    conn.commit()
+    conn.close()
+
+def GetGenreList(cond = ""):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+
+    res = cur.execute(f"SELECT * FROM Genre {cond}").fetchall()
+    conn.close()
+
+    return res
 
 def GetMovieList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")

@@ -5,15 +5,15 @@ from PyQt5.uic import loadUi
 from db import *
 from MessageBox import MessageBox
 
-class BookTicket(QMainWindow):
+class AddGenre(QMainWindow):
     def __init__(self):
-        super(BookTicket, self).__init__()
+        super(AddGenre, self).__init__()
         loadUi("add_genre.ui", self)
         self.addGenreButton.clicked.connect(self.__addGenreClicked)
 
     def __addGenreClicked(self):
         if self.genreName.text() != "":
-            AddGenre(self.genreName.text())
+            AddNewGenre(self.genreName.text())
             MessageBox.showInformationMessage("Genre added.", "Success")
             self.genreName.setText("")
         else:
