@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>809</width>
+    <width>813</width>
     <height>613</height>
    </rect>
   </property>
@@ -110,14 +110,14 @@ System</string>
     <widget class="QPushButton" name="ticketsButton">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>170</y>
+       <x>21</x>
+       <y>169</y>
        <width>131</width>
        <height>31</height>
       </rect>
      </property>
      <property name="text">
-      <string>Bookings</string>
+      <string>Tickets</string>
      </property>
      <property name="icon">
       <iconset>
@@ -137,7 +137,7 @@ System</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>230</y>
+       <y>410</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -163,7 +163,7 @@ System</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>270</y>
+       <y>450</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -200,6 +200,58 @@ System</string>
      <property name="icon">
       <iconset>
        <normaloff>../img/logout.png</normaloff>../img/logout.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ticketsButton_2">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>210</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cinema</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/cinema.png</normaloff>../img/cinema.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ticketsButton_3">
+     <property name="geometry">
+      <rect>
+       <x>21</x>
+       <y>260</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Genres</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/genre.png</normaloff>../img/genre.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -468,8 +520,8 @@ background-color: #178fd6;
     <widget class="QPushButton" name="bookTicket">
      <property name="geometry">
       <rect>
-       <x>500</x>
-       <y>62</y>
+       <x>520</x>
+       <y>60</y>
        <width>81</width>
        <height>31</height>
       </rect>

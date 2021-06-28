@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>279</width>
-    <height>260</height>
+    <width>276</width>
+    <height>261</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -73,7 +73,7 @@ color: #034488;
 }</string>
      </property>
      <property name="text">
-      <string>Add Cinema</string>
+      <string>Add Genre</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -110,8 +110,8 @@ color: #034488;
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
-      <width>161</width>
+      <y>110</y>
+      <width>251</width>
       <height>41</height>
      </rect>
     </property>
@@ -127,7 +127,7 @@ border-radius: 20px;
       <rect>
        <x>10</x>
        <y>7</y>
-       <width>141</width>
+       <width>231</width>
        <height>26</height>
       </rect>
      </property>
@@ -137,53 +137,15 @@ border: TRANSPARENT;
 }</string>
      </property>
      <property name="placeholderText">
-      <string>Cinema Name</string>
+      <string>Genre Name</string>
      </property>
     </widget>
    </widget>
-   <widget class="QWidget" name="rect3" native="true">
-    <property name="geometry">
-     <rect>
-      <x>175</x>
-      <y>120</y>
-      <width>91</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#rect3{
-background-color: white;
-border: 1px white;
-border-radius: 20px;
-}</string>
-    </property>
-    <widget class="QSpinBox" name="noOfTickets">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>71</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#noOfTickets{
-border: 1px white;
-}</string>
-     </property>
-     <property name="suffix">
-      <string> seats</string>
-     </property>
-     <property name="prefix">
-      <string/>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QPushButton" name="addCinemaButton">
+   <widget class="QPushButton" name="addGenreButton">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>190</y>
+      <y>180</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -192,19 +154,19 @@ border: 1px white;
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">#addCinemaButton{
+     <string notr="true">#addGenreButton{
 background-color: #ccdde8;
 border: 1px white;
 border-radius: 20px;
 }
-#addCinemaButton:hover{
+#bookTicketButton:hover{
 background-color: #ccdde8;
 border: 1px black;
 border-radius: 20px;
 }</string>
     </property>
     <property name="text">
-     <string>Add Cinema</string>
+     <string>Add Genre</string>
     </property>
    </widget>
   </widget>
