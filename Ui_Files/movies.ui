@@ -390,6 +390,8 @@ background-color: #fffcf6;
      <property name="styleSheet">
       <string notr="true">#stackedWidget{
 background-color: #178fd6;
+border: 1px white;
+border-radius: 20px;
 }</string>
      </property>
      <property name="currentIndex">
@@ -509,42 +511,132 @@ border: 1px solid black;
     <widget class="QPushButton" name="next">
      <property name="geometry">
       <rect>
-       <x>430</x>
+       <x>396</x>
        <y>710</y>
-       <width>75</width>
-       <height>23</height>
+       <width>22</width>
+       <height>22</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#next{
+background-color: rgb(85, 255, 255);
+border: 1px solid white;
+border-radius: 10px;
+}
+#next:hover{
+background-color: white;
+border: 1px solid white;
+border-radius: 10px;
+}</string>
+     </property>
      <property name="text">
-      <string>PushButton</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/next.png</normaloff>../img/next.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="back">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>316</x>
        <y>710</y>
-       <width>75</width>
-       <height>23</height>
+       <width>22</width>
+       <height>22</height>
       </rect>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#back{
+background-color: rgb(85, 255, 255);
+border: 1px solid white;
+border-radius: 10px;
+}
+#back:hover{
+background-color: white;
+border: 1px solid white;
+border-radius: 10px;
+}</string>
+     </property>
      <property name="text">
-      <string>PushButton</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/prev.png</normaloff>../img/prev.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QLabel" name="page_4">
      <property name="geometry">
       <rect>
-       <x>340</x>
-       <y>710</y>
+       <x>344</x>
+       <y>715</y>
        <width>47</width>
        <height>13</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;</string>
+     </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>5</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QWidget" name="rect" native="true">
+     <property name="geometry">
+      <rect>
+       <x>288</x>
+       <y>704</y>
+       <width>161</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#rect {
+background-color: rgb(213, 213, 213);
+border-radius: 15px;
+}</string>
+     </property>
+    </widget>
+    <zorder>rect</zorder>
+    <zorder>label</zorder>
+    <zorder>addTicket</zorder>
+    <zorder>editButton</zorder>
+    <zorder>deleteButton</zorder>
+    <zorder>stackedWidget</zorder>
+    <zorder>prevButton</zorder>
+    <zorder>nextButton</zorder>
+    <zorder>bookTicket</zorder>
+    <zorder>next</zorder>
+    <zorder>back</zorder>
+    <zorder>page_4</zorder>
    </widget>
    <zorder>mainBG</zorder>
    <zorder>navigationBG</zorder>
