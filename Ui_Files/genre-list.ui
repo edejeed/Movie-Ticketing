@@ -17,21 +17,36 @@
    <widget class="QTableWidget" name="genreList">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>60</y>
-      <width>331</width>
-      <height>461</height>
+      <x>120</x>
+      <y>120</y>
+      <width>381</width>
+      <height>351</height>
      </rect>
     </property>
    </widget>
    <widget class="QPushButton" name="deleteButton">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>530</y>
-      <width>75</width>
-      <height>23</height>
+      <x>390</x>
+      <y>480</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#deleteButton{
+background-color: #ccdde8;
+border: 1px white;
+border-radius: 20px;
+}
+#deleteButton:hover{
+color:rgb(73, 147, 221);
+background-color: rgb(13, 27, 38);
+border: 1px black;
+border-radius: 20px;
+}
+
+</string>
     </property>
     <property name="text">
      <string>Delete</string>
@@ -40,8 +55,8 @@
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>30</y>
+      <x>370</x>
+      <y>40</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -54,43 +69,109 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>30</y>
+      <y>40</y>
       <width>113</width>
       <height>20</height>
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QWidget" name="navigationBG" native="true">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>180</y>
-      <width>231</width>
-      <height>121</height>
+      <y>0</y>
+      <width>631</width>
+      <height>91</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">#navigationBG {
+background-color: #ccdde8;
+
+}
+
+</string>
     </property>
-    <property name="text">
-     <string>Di jud ko kabalo unsa layout ani</string>
-    </property>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>550</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Logout</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/logout.png</normaloff>../img/logout.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="systemLabel">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>15</y>
+       <width>101</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#systemLabel {
+font: 75 12pt &quot;MS Shell Dlg 2&quot;;
+color: #034488;
+}</string>
+     </property>
+     <property name="text">
+      <string>Genre</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>20</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/icon.png</normaloff>../img/icon.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>50</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>10</y>
-      <width>111</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Di pud ko sure ani -&gt;</string>
-    </property>
-   </widget>
+   <zorder>navigationBG</zorder>
+   <zorder>genreList</zorder>
+   <zorder>deleteButton</zorder>
+   <zorder>searchButton</zorder>
+   <zorder>lineEdit</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

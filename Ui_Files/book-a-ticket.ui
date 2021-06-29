@@ -185,9 +185,9 @@ border: 1px white;
    <widget class="QWidget" name="rect3" native="true">
     <property name="geometry">
      <rect>
-      <x>166</x>
+      <x>176</x>
       <y>190</y>
-      <width>91</width>
+      <width>81</width>
       <height>41</height>
      </rect>
     </property>
@@ -201,9 +201,9 @@ border-radius: 20px;
     <widget class="QSpinBox" name="noOfTickets">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>20</x>
        <y>10</y>
-       <width>71</width>
+       <width>51</width>
        <height>22</height>
       </rect>
      </property>
@@ -211,12 +211,6 @@ border-radius: 20px;
       <string notr="true">#noOfTickets{
 border: 1px white;
 }</string>
-     </property>
-     <property name="suffix">
-      <string> tickets</string>
-     </property>
-     <property name="prefix">
-      <string/>
      </property>
     </widget>
    </widget>
@@ -233,19 +227,35 @@ border: 1px white;
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">#bookTicketButton{
+     <string notr="true">
+#bookTicketButton{
 background-color: #ccdde8;
 border: 1px white;
 border-radius: 20px;
 }
 #bookTicketButton:hover{
-background-color: #ccdde8;
+color:rgb(73, 147, 221);
+background-color: rgb(13, 27, 38);
 border: 1px black;
 border-radius: 20px;
-}</string>
+}
+</string>
     </property>
     <property name="text">
      <string>Book Ticket</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>185</x>
+      <y>170</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>No. of tickets</string>
     </property>
    </widget>
    <widget class="QWidget" name="rect4" native="true">
@@ -305,6 +315,7 @@ border: 1px white;
    <zorder>rect2</zorder>
    <zorder>rect3</zorder>
    <zorder>bookTicketButton</zorder>
+   <zorder>label</zorder>
    <zorder>label_2</zorder>
   </widget>
  </widget>
