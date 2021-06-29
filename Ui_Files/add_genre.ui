@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>276</width>
+    <width>257</width>
     <height>261</height>
    </rect>
   </property>
@@ -109,8 +109,8 @@ color: #034488;
    <widget class="QWidget" name="rect1" native="true">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>110</y>
+      <x>3</x>
+      <y>109</y>
       <width>251</width>
       <height>41</height>
      </rect>
@@ -144,7 +144,7 @@ border: TRANSPARENT;
    <widget class="QPushButton" name="addGenreButton">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>3</x>
       <y>180</y>
       <width>251</width>
       <height>41</height>
