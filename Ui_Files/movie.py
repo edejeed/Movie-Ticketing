@@ -13,6 +13,10 @@ class MovieScreen(QMainWindow):
         loadUi("movies.ui", self)
 
         self.widget = widget
+        if self.widget != None:
+            self.widget.setFixedHeight(750)
+            self.widget.setFixedWidth(861)
+            
         self.addTicket.clicked.connect(self.__addMovie)
         self.next.clicked.connect(self.__next)
         self.back.clicked.connect(self.__back)

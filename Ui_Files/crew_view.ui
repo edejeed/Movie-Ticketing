@@ -182,7 +182,7 @@ background-color: #fffcf6;
       <rect>
        <x>50</x>
        <y>-10</y>
-       <width>241</width>
+       <width>271</width>
        <height>141</height>
       </rect>
      </property>
@@ -297,7 +297,7 @@ background-color: #178fd6;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../Desktop/MOVIE TICKETING SYSTEM/img/prev.png</normaloff>../../../../Desktop/MOVIE TICKETING SYSTEM/img/prev.png</iconset>
+       <normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/prev.png</normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/prev.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -323,7 +323,7 @@ background-color: #178fd6;
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../../../../Desktop/MOVIE TICKETING SYSTEM/img/next.png</normaloff>../../../../Desktop/MOVIE TICKETING SYSTEM/img/next.png</iconset>
+       <normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/next.png</normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/next.png</iconset>
      </property>
      <property name="iconSize">
       <size>
