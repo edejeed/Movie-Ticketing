@@ -11,6 +11,7 @@ def Authenticate(user, password, priv=0):
 
     conn.close()
 
+#ADD
 def AddUser(user, password, priv = 0):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
@@ -59,6 +60,15 @@ def AddMovieGenre(movieID, genreID):
     conn.commit()
     conn.close()
 
+def AddNewShow(mID, cID, date, time, showing):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"INSERT INTO MovieShowsAt(movieID, cinemaID, date, time, isShowing) VALUES(?,?,?,?,?)", (mID,cID, date, time, showing))
+
+    conn.commit()
+    conn.close()
+
+#UPDATES
 def UpdateGenre(id, genre):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
@@ -67,6 +77,8 @@ def UpdateGenre(id, genre):
     conn.commit()
     conn.close()
 
+
+#GETS
 def GetGenreList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
@@ -114,14 +126,6 @@ def GetBookingList(cond = ""):
 
     return res
 
-def DeleteGenre(id):
-    conn = sqlite3.connect("MovieTicketingSystem.db")
-    cur = conn.cursor()
-    cur.execute(f"DELETE FROM Genre WHERE genreID = ?", (id,))
-
-    conn.commit()
-    conn.close()
-    
 def GetMovieCinemaOfBooking(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
@@ -130,3 +134,22 @@ def GetMovieCinemaOfBooking(cond = ""):
     conn.close()
 
     return res
+
+def GetShow(page, cond = ""):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+
+    res = cur.execute(f"SELECT title, synopsis, date, time, name, showID FROM Movie AS mov INNER JOIN MovieShowsAt AS show ON mov.id = show.movieID INNER JOIN Cinema AS cin ON show.cinemaID = cin.id WHERE show.isShowing = true LIMIT 6 OFFSET {(page-1)*6}").fetchall()
+    conn.close()
+
+    return res
+
+#Deletes
+def DeleteGenre(id):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"DELETE FROM Genre WHERE genreID = ?", (id,))
+
+    conn.commit()
+    conn.close()
+    

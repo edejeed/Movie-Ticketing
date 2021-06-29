@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>273</width>
-    <height>373</height>
+    <height>376</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -266,7 +266,7 @@ border: TRANSPARENT;
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>300</y>
+      <y>310</y>
       <width>251</width>
       <height>41</height>
      </rect>

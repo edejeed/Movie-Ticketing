@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>141</width>
+    <height>271</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QWidget" name="movieBG" native="true">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>30</y>
+     <x>0</x>
+     <y>0</y>
      <width>141</width>
-     <height>221</height>
+     <height>271</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -29,14 +29,19 @@ border: 1px white;
 border-radius: 20px;
 }</string>
    </property>
-   <widget class="QLabel" name="movieDesc">
+   <widget class="QLabel" name="title">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>140</y>
-      <width>121</width>
-      <height>71</height>
+      <width>141</width>
+      <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -87,6 +92,59 @@ border-radius: 20px;
     </property>
     <property name="scaledContents">
      <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="date">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>220</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="time">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>240</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cinema">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>195</y>
+      <width>141</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>
