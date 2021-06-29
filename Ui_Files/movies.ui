@@ -117,7 +117,7 @@ System</string>
       </rect>
      </property>
      <property name="text">
-      <string>Tickets</string>
+      <string>Bookings</string>
      </property>
      <property name="icon">
       <iconset>
