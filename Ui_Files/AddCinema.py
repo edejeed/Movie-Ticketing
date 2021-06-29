@@ -1,8 +1,8 @@
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from db import *
+from Ui_Files.db import *
 from MessageBox import MessageBox
 
 class AddCinema(QMainWindow):
