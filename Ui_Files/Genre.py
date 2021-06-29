@@ -4,12 +4,20 @@ from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from db import *
 from AddGenre import AddGenre
+import BookingList
+import MovieList
+import movie
 from MessageBox import MessageBox
 
 class Genre(QMainWindow):
-    def __init__(self):
+    def __init__(self, widget = None):
         super(Genre, self).__init__()
         loadUi("genre-list.ui", self)
+
+        self.widget = widget
+        if self.widget != None:
+            self.widget.setFixedWidth(621)
+            self.widget.setFixedHeight(550)
 
         #Table
         self.genreList.setColumnCount(2)
@@ -20,6 +28,11 @@ class Genre(QMainWindow):
 
         self.deleteButton.clicked.connect(self.__deleteClicked)
         self.searchButton.clicked.connect(self.__searchClicked)
+
+        self.showButton.clicked.connect(self.__showClicked)
+        self.ticketsButton.clicked.connect(self.__ticketsClicked)
+        self.cinemaButton.clicked.connect(self.__cinemaClicked)
+        self.movieButton.clicked.connect(self.__movieButtonClicked)
         
         self.showGenreList()
 
@@ -57,6 +70,24 @@ class Genre(QMainWindow):
         id = self.genreList.item(self.genreList.currentRow(), 0).text()
         self.b = AddGenre(self, "e", id)
         self.b.show()
+    
+    def __showClicked(self):
+        self.a = movie.MovieScreen(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+    
+    def __movieButtonClicked(self):
+        self.a = MovieList.MovieList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+
+    def __cinemaClicked(self):
+        pass
+    
+    def __ticketsClicked(self):
+        self.a = BookingList.BookingList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
 
 
 if __name__ == "__main__":

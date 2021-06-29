@@ -4,6 +4,9 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from MovieItem import MovieItem
 from AddShow import AddShow
+import MovieList
+import BookingList
+import Genre
 from db import *
 
 
@@ -16,10 +19,14 @@ class MovieScreen(QMainWindow):
         if self.widget != None:
             self.widget.setFixedHeight(750)
             self.widget.setFixedWidth(861)
-            
+
         self.addTicket.clicked.connect(self.__addMovie)
         self.next.clicked.connect(self.__next)
         self.back.clicked.connect(self.__back)
+        self.movieButton.clicked.connect(self.__movieButtonClicked)
+        self.ticketsButton.clicked.connect(self.__ticketsClicked)
+        self.cinemaButton.clicked.connect(self.__cinemaClicked)
+        self.genreButton.clicked.connect(self.__genreClicked)
         
         self.pageN = 1
         self.widgs = [MovieItem()]*6
@@ -65,6 +72,24 @@ class MovieScreen(QMainWindow):
     def __addMovie(self):
         self.a = AddShow(self)
         self.a.show()
+
+    def __movieButtonClicked(self):
+        self.a = MovieList.MovieList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+    
+    def __ticketsClicked(self):
+        self.a = BookingList.BookingList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+
+    def __cinemaClicked(self):
+        pass
+    
+    def __genreClicked(self):
+        self.a = Genre.Genre(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

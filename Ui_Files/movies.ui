@@ -85,7 +85,7 @@ System</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
+       <y>180</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -122,7 +122,7 @@ background-color: rgb(236, 236, 236);
      <property name="geometry">
       <rect>
        <x>21</x>
-       <y>169</y>
+       <y>219</y>
        <width>131</width>
        <height>31</height>
       </rect>
@@ -159,7 +159,7 @@ background-color: rgb(236, 236, 236);
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>460</y>
+       <y>540</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -196,7 +196,7 @@ background-color: rgb(236, 236, 236);
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>500</y>
+       <y>590</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -233,7 +233,7 @@ background-color: rgb(236, 236, 236);
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>600</y>
+       <y>690</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -266,23 +266,23 @@ background-color: rgb(236, 236, 236);
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="ticketsButton_2">
+    <widget class="QPushButton" name="cinemaButton">
      <property name="geometry">
       <rect>
        <x>21</x>
-       <y>210</y>
+       <y>260</y>
        <width>131</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#ticketsButton_2{
+      <string notr="true">#cinemaButton{
 background-color: TRANSPARENT;
 border: TRANSPARENT;
 border-radius: 15px;
 }
 
-#ticketsButton_2:hover{
+#cinemaButton:hover{
 background-color: rgb(236, 236, 236);
 }</string>
      </property>
@@ -303,23 +303,23 @@ background-color: rgb(236, 236, 236);
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="ticketsButton_3">
+    <widget class="QPushButton" name="genreButton">
      <property name="geometry">
       <rect>
        <x>21</x>
-       <y>260</y>
+       <y>310</y>
        <width>131</width>
        <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">#ticketsButton_3{
+      <string notr="true">#genreButton{
 background-color: TRANSPARENT;
 border: TRANSPARENT;
 border-radius: 15px;
 }
 
-#ticketsButton_3:hover{
+#genreButton:hover{
 background-color: rgb(236, 236, 236);
 }</string>
      </property>
@@ -329,6 +329,43 @@ background-color: rgb(236, 236, 236);
      <property name="icon">
       <iconset>
        <normaloff>../img/genre.png</normaloff>../img/genre.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#showButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#showButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Shows</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/movies.png</normaloff>../img/movies.png</iconset>
      </property>
      <property name="iconSize">
       <size>
