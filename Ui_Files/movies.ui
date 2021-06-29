@@ -300,7 +300,7 @@ background-color: #fffcf6;
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="addButton">
+    <widget class="QPushButton" name="addTicket">
      <property name="geometry">
       <rect>
        <x>353</x>
@@ -393,7 +393,7 @@ background-color: #178fd6;
 }</string>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QWidget" name="gridLayoutWidget">
