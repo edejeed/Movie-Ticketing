@@ -6,9 +6,10 @@ from MovieItem import MovieItem
 
 
 class MovieScreen(QMainWindow):
-    def __init__(self):
+    def __init__(self, widget = None):
         super(MovieScreen, self).__init__()
         loadUi("movies.ui", self)
+        self.widget = widget
         self.addTicket.clicked.connect(self.__addMovie)
         self.gridLayout.setSpacing(0)
         self.__gridX = 0

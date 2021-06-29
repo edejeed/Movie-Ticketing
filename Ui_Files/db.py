@@ -85,11 +85,11 @@ def GetMovieList(cond = ""):
 
     return res
 
-def GetCinemaList():
+def GetCinemaList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
 
-    res = cur.execute(f"SELECT * FROM Cinema").fetchall()
+    res = cur.execute(f"SELECT * FROM Cinema {cond}").fetchall()
     conn.close()
     
     return res
@@ -104,6 +104,16 @@ def getScheduleList(movieID, cinemaID):
 
     return res
 
+def GetBookingList(cond = ""):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+
+    res = cur.execute(f"SELECT * FROM Booking {cond}").fetchall()
+
+    conn.close()
+
+    return res
+
 def DeleteGenre(id):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
@@ -112,3 +122,11 @@ def DeleteGenre(id):
     conn.commit()
     conn.close()
     
+def GetMovieCinemaOfBooking(cond = ""):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+
+    res = cur.execute(f"SELECT title, name, noOfTickets FROM Movie INNER JOIN Booking ON Movie.id = Booking.movieID INNER JOIN Cinema ON Booking.cinemaID = Cinema.id").fetchall()
+    conn.close()
+
+    return res

@@ -250,7 +250,7 @@ background-color: #fffcf6;
         <height>489</height>
        </rect>
       </property>
-      <widget class="QTableWidget" name="tableWidget">
+      <widget class="QTableWidget" name="bookingList">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -289,11 +289,11 @@ background-color: #fffcf6;
        <attribute name="horizontalHeaderStretchLastSection">
         <bool>true</bool>
        </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>30</number>
-       </attribute>
        <attribute name="verticalHeaderMinimumSectionSize">
         <number>23</number>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>30</number>
        </attribute>
        <attribute name="verticalHeaderStretchLastSection">
         <bool>false</bool>

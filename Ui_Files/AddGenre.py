@@ -40,7 +40,7 @@ class AddGenre(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    booking = BookTicket()
+    booking = AddGenre()
     widget = QtWidgets.QStackedWidget()
     widget.addWidget(booking)
     widget.setFixedHeight(276)

@@ -155,7 +155,7 @@ class AdminLogin(QMainWindow):
             res = Authenticate(user, password, 1)
 
             if res:
-                moviescreen = MovieScreen()
+                moviescreen = MovieScreen(widget)
                 widget.addWidget(moviescreen)
                 widget.setCurrentIndex(widget.currentIndex() + 1)
             else: 

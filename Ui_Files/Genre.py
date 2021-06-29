@@ -63,12 +63,6 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     genre = Genre()
     genre.show()
-    # booking = BookTicket()
-    # widget = QtWidgets.QStackedWidget()
-    # widget.addWidget(booking)
-    # widget.setFixedHeight(276)
-    # widget.setFixedWidth(261)
-    # widget.show()
     try:
         sys.exit(app.exec_())
     except:

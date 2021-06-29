@@ -22,7 +22,7 @@ class BookTicket(QMainWindow):
         
     def __bookTicketClicked(self):
         if self.movieTitle.currentIndex() > 0 and self.cinemaName.currentIndex() > 0 and self.noOfTickets.value() > 0 and self.schedule.currentIndex() > 0:
-            AddBooking(self.movieID[self.movieTitle.currentIndex()-1], self.cinemaID[self.cinemaName.currentIndex()-1], self.noOfTickets.value())
+            AddNewBooking(self.movieID[self.movieTitle.currentIndex()-1], self.cinemaID[self.cinemaName.currentIndex()-1], self.noOfTickets.value())
             MessageBox.showInformationMessage("Booking successful.", "Success")
             self.movieTitle.setCurrentIndex(0)
             self.cinemaName.setCurrentIndex(0)
