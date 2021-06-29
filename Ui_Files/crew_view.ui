@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>813</width>
-    <height>613</height>
+    <width>847</width>
+    <height>749</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>171</width>
-      <height>611</height>
+      <height>751</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -81,63 +81,11 @@ System</string>
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="ticketsButton">
-     <property name="geometry">
-      <rect>
-       <x>21</x>
-       <y>130</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Tickets</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../img/tickets.png</normaloff>../img/tickets.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>40</width>
-       <height>40</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="crewButton">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>500</y>
-       <width>111</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string> Crew</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../img/crew.png</normaloff>../img/crew.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>40</width>
-       <height>40</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QPushButton" name="logoutButton">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>550</y>
+       <y>680</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -159,14 +107,66 @@ System</string>
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QPushButton" name="movieButton">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>120</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Movies</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/movies.png</normaloff>../img/movies.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bookings</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/tickets.png</normaloff>../img/tickets.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <widget class="QWidget" name="mainBG" native="true">
     <property name="geometry">
      <rect>
       <x>160</x>
       <y>0</y>
-      <width>651</width>
-      <height>611</height>
+      <width>731</width>
+      <height>751</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -177,168 +177,10 @@ background-color: #fffcf6;
 
 </string>
     </property>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>-10</y>
-       <width>271</width>
-       <height>141</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>../img/books.png</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QStackedWidget" name="stackedWidget">
-     <property name="geometry">
-      <rect>
-       <x>48</x>
-       <y>100</y>
-       <width>561</width>
-       <height>489</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#stackedWidget{
-background-color: #178fd6;
-}</string>
-     </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
-     <widget class="QWidget" name="page">
-      <widget class="QWidget" name="gridLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>561</width>
-         <height>491</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>0</number>
-        </property>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="page_2">
-      <widget class="QWidget" name="gridLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>561</width>
-         <height>491</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>0</number>
-        </property>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="page_3">
-      <widget class="QWidget" name="gridLayoutWidget_3">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>0</y>
-         <width>561</width>
-         <height>491</height>
-        </rect>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <property name="leftMargin">
-         <number>0</number>
-        </property>
-        <property name="topMargin">
-         <number>0</number>
-        </property>
-        <property name="verticalSpacing">
-         <number>0</number>
-        </property>
-       </layout>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="prevButton">
-     <property name="geometry">
-      <rect>
-       <x>17</x>
-       <y>360</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/prev.png</normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/prev.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>35</width>
-       <height>35</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="nextButton">
-     <property name="geometry">
-      <rect>
-       <x>610</x>
-       <y>360</y>
-       <width>31</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/next.png</normaloff>../../../Desktop/MOVIE TICKETING SYSTEM/img/next.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>35</width>
-       <height>35</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QPushButton" name="bookTicket">
      <property name="geometry">
       <rect>
-       <x>520</x>
+       <x>580</x>
        <y>60</y>
        <width>81</width>
        <height>31</height>
@@ -368,6 +210,194 @@ border: 1px solid black;
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>631</width>
+       <height>601</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#stackedWidget{
+background-color: #178fd6;
+border: 1px white;
+border-radius: 20px;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <widget class="QWidget" name="gridLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>631</width>
+         <height>601</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>50</number>
+        </property>
+        <property name="topMargin">
+         <number>25</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>0</number>
+        </property>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="page_2"/>
+     <widget class="QWidget" name="page_3"/>
+    </widget>
+    <widget class="QPushButton" name="back">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>710</y>
+       <width>22</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#back{
+background-color: rgb(85, 255, 255);
+border: 1px solid white;
+border-radius: 10px;
+}
+#back:hover{
+background-color: white;
+border: 1px solid white;
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/prev.png</normaloff>../img/prev.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="page_4">
+     <property name="geometry">
+      <rect>
+       <x>328</x>
+       <y>715</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 12pt &quot;Century Gothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="rect" native="true">
+     <property name="geometry">
+      <rect>
+       <x>272</x>
+       <y>704</y>
+       <width>161</width>
+       <height>34</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#rect {
+background-color: rgb(213, 213, 213);
+border-radius: 15px;
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="next">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>710</y>
+       <width>22</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#next{
+background-color: rgb(85, 255, 255);
+border: 1px solid white;
+border-radius: 10px;
+}
+#next:hover{
+background-color: white;
+border: 1px solid white;
+border-radius: 10px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/next.png</normaloff>../img/next.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>241</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>../img/moviesHeader.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <zorder>rect</zorder>
+    <zorder>bookTicket</zorder>
+    <zorder>stackedWidget</zorder>
+    <zorder>back</zorder>
+    <zorder>page_4</zorder>
+    <zorder>next</zorder>
+    <zorder>label_2</zorder>
    </widget>
    <zorder>mainBG</zorder>
    <zorder>navigationBG</zorder>

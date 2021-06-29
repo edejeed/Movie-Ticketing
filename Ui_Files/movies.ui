@@ -380,8 +380,8 @@ background-color: #fffcf6;
     <widget class="QPushButton" name="addTicket">
      <property name="geometry">
       <rect>
-       <x>353</x>
-       <y>60</y>
+       <x>460</x>
+       <y>50</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -419,8 +419,8 @@ background-color: rgb(236, 236, 236);
     <widget class="QPushButton" name="editButton">
      <property name="geometry">
       <rect>
-       <x>393</x>
-       <y>60</y>
+       <x>500</x>
+       <y>50</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -458,8 +458,8 @@ background-color: rgb(236, 236, 236);
     <widget class="QPushButton" name="deleteButton">
      <property name="geometry">
       <rect>
-       <x>430</x>
-       <y>60</y>
+       <x>537</x>
+       <y>50</y>
        <width>41</width>
        <height>41</height>
       </rect>
@@ -594,8 +594,8 @@ border-radius: 20px;
     <widget class="QPushButton" name="bookTicket">
      <property name="geometry">
       <rect>
-       <x>524</x>
-       <y>62</y>
+       <x>590</x>
+       <y>55</y>
        <width>81</width>
        <height>31</height>
       </rect>

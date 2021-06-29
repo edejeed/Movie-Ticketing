@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from movie import MovieScreen
 from MessageBox import MessageBox
+from CrewView import CrewView
 from db import *
 
 class WelcomeScreen(QMainWindow):
@@ -68,8 +69,8 @@ class CrewLogin(QMainWindow):
             res = Authenticate(user, password)
 
             if res:
-                moviescreen = MovieScreen()
-                widget.addWidget(moviescreen)
+                crew = CrewView(widget)
+                widget.addWidget(crew)
                 widget.setCurrentIndex(widget.currentIndex() + 1)
             else:
                 msg.setText("Incorrect username or password")
