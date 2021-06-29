@@ -179,7 +179,7 @@ background-color: #fffcf6;
       <string notr="true">font: 15pt &quot;Times New Roman&quot;;</string>
      </property>
      <property name="text">
-      <string>Movie Description :</string>
+      <string>Synopsis:</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="description">
@@ -220,8 +220,8 @@ background-color: #fffcf6;
      <widget class="QPushButton" name="update">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>320</y>
+        <x>420</x>
+        <y>350</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -296,8 +296,8 @@ QPushButton:hover{
      <widget class="QPushButton" name="back">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>370</y>
+        <x>420</x>
+        <y>400</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -317,11 +317,26 @@ QPushButton:hover{
        <string>B A C K</string>
       </property>
      </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>381</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+      </layout>
+     </widget>
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>200</y>
+        <y>180</y>
         <width>171</width>
         <height>31</height>
        </rect>
@@ -332,49 +347,6 @@ QPushButton:hover{
       <property name="text">
        <string>Movie Genre :</string>
       </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>200</y>
-        <width>121</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color:rgb(255, 255, 255)</string>
-      </property>
-      <item>
-       <property name="text">
-        <string>Action</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Adventure</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Comedy</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Horror</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Romance</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Thriller</string>
-       </property>
-      </item>
      </widget>
     </widget>
     <zorder>widget</zorder>
