@@ -3,13 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="87cf92fc-496e-4383-8eb8-c7c33b82c26d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/MovieTicketingSystem.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/MovieTicketingSystem.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/crew_data.db" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/crew_data.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/AddCinema.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/AddCinema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/AddGenre.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/AddGenre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/AddMovie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/AddMovie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/BookTicket.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/BookTicket.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/Genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/Genre.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/admin_signup.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/admin_signup.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/crew_login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/crew_login.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/crew_signup.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/crew_signup.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/db.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Ui_Files/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/movie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ddl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/movies.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/movies.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/movie.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +55,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\Documents\GitHub\Movie-Ticketing" />
       <recent name="C:\Users\Admin\Documents\GitHub\Movie-Ticketing\Ui_Files" />
+      <recent name="C:\Users\Admin\Documents\GitHub\Movie-Ticketing" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -96,6 +102,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="db (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Movie-Ticketing" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Admin\Documents\GitHub\Movie-Ticketing\Ui_Files\db.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="db" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Movie-Ticketing" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,7 +135,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Admin\Documents\GitHub\Movie-Ticketing\db.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Admin\Documents\GitHub\Movie-Ticketing\Ui_Files\db.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,34 +165,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="movie (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Movie-Ticketing" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Ui_Files" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\Admin\Documents\GitHub\Movie-Ticketing\movie.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.db (1)" />
         <item itemvalue="Python.db" />
         <item itemvalue="Python.database (1)" />
         <item itemvalue="Python.database" />
-        <item itemvalue="Python.movie (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +208,10 @@
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
     <state x="1932" y="-112" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624820991864" />
+    <state x="1896" y="-168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624941672558">
+      <screen x="1366" y="-349" width="1600" height="870" />
+    </state>
+    <state x="1896" y="-168" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624941672558" />
     <state x="1897" y="-318" key="#movie" timestamp="1624818032635">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
@@ -214,22 +224,22 @@
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
     <state x="1946" y="-160" key="FileChooserDialogImpl/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624822365902" />
-    <state width="1601" height="233" key="GridCell.Tab.0.bottom" timestamp="1624827978317">
+    <state width="1601" height="233" key="GridCell.Tab.0.bottom" timestamp="1624943151399">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624827978317" />
-    <state width="1601" height="233" key="GridCell.Tab.0.center" timestamp="1624827978317">
+    <state width="1601" height="233" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
+    <state width="1601" height="233" key="GridCell.Tab.0.center" timestamp="1624943151399">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.center/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624827978317" />
-    <state width="1601" height="233" key="GridCell.Tab.0.left" timestamp="1624827978317">
+    <state width="1601" height="233" key="GridCell.Tab.0.center/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
+    <state width="1601" height="233" key="GridCell.Tab.0.left" timestamp="1624943151399">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.left/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624827978317" />
-    <state width="1601" height="233" key="GridCell.Tab.0.right" timestamp="1624827978317">
+    <state width="1601" height="233" key="GridCell.Tab.0.left/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
+    <state width="1601" height="233" key="GridCell.Tab.0.right" timestamp="1624943151399">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624827978317" />
+    <state width="1601" height="233" key="GridCell.Tab.0.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
     <state width="1601" height="288" key="GridCell.Tab.1.bottom" timestamp="1624818324756">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
@@ -246,10 +256,10 @@
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
     <state width="1601" height="288" key="GridCell.Tab.1.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624818324756" />
-    <state x="1862" y="-91" key="com.intellij.ide.util.TipDialog" timestamp="1624823967726">
+    <state x="1862" y="-91" key="com.intellij.ide.util.TipDialog" timestamp="1624940436817">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state x="1862" y="-91" key="com.intellij.ide.util.TipDialog/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624823967726" />
+    <state x="1862" y="-91" key="com.intellij.ide.util.TipDialog/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624940436817" />
     <state x="209" y="84" width="1137" height="619" key="dock-window-1" timestamp="1624826372638">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

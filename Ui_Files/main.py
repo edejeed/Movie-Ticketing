@@ -2,8 +2,8 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from movie import MovieScreen
-from db import *
+from Ui_Files.movie import MovieScreen
+from Ui_Files.db import *
 
 class WelcomeScreen(QMainWindow):
     def __init__(self):
@@ -51,6 +51,7 @@ class CrewLogin(QMainWindow):
         loadUi("crew_login.ui", self)
         self.crew_pass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter.clicked.connect(self.loginfunction)
+        self.signUpButton.clicked.connect(self.signUpFunction)
 
     def loginfunction(self):
         user = self.crew_user.text()
@@ -95,6 +96,10 @@ class CrewLogin(QMainWindow):
         #     msg.setText("The username you entered isn’t connected to an account!")
         #     x = msg.exec_()
 
+    @staticmethod
+    def signUpFunction():
+        CrewScreen().signup()
+
 
 class CrewSignup(QMainWindow):
     def __init__(self):
@@ -103,6 +108,7 @@ class CrewSignup(QMainWindow):
         self.crew_pass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.crew_pass1.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter.clicked.connect(self.signupfunction)
+        self.loginButton.clicked.connect(self.loginFunction)
 
     def signupfunction(self):
         user = self.crew_user.text()
@@ -140,6 +146,10 @@ class CrewSignup(QMainWindow):
             widget.addWidget(moviescreen)
             widget.setCurrentIndex(widget.currentIndex() + 1)
 
+    @staticmethod
+    def loginFunction(self):
+        CrewScreen().login()
+
 
 class AdminScreen(QMainWindow):
     def __init__(self):
@@ -167,6 +177,7 @@ class AdminLogin(QMainWindow):
         loadUi("admin_login.ui", self)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.loginButton.clicked.connect(self.loginfunction)
+        self.signUpButton.clicked.connect(self.signUpfunction)
 
     def loginfunction(self):
         user = self.username.text()
@@ -194,6 +205,7 @@ class AdminLogin(QMainWindow):
             #         msg.setWindowTitle("Error")
             #         msg.setText("The password you’ve entered is incorrect!")
             #         x = msg.exec_()
+
             res = Authenticate(user, password, 1)
 
             if res:
@@ -208,6 +220,9 @@ class AdminLogin(QMainWindow):
         #     msg.setText("The username you entered isn’t connected to an account!")
         #     x = msg.exec_()
 
+    def signUpfunction(self):
+        AdminScreen().signup()
+
 
 class AdminSignup(QMainWindow):
     def __init__(self):
@@ -216,6 +231,7 @@ class AdminSignup(QMainWindow):
         self.admin_pass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.admin_pass1.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter.clicked.connect(self.signupfunction)
+        self.signUpButton.clicked.connect(self.loginfunction)
 
     def signupfunction(self):
         user = self.admin_user.text()
@@ -252,6 +268,9 @@ class AdminSignup(QMainWindow):
             moviescreen = MovieScreen()
             widget.addWidget(moviescreen)
             widget.setCurrentIndex(widget.currentIndex() + 1)
+
+    def loginfunction(self):
+        AdminScreen().login()
 
 
 # class MovieScreen(QMainWindow):
