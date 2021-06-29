@@ -2,7 +2,7 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from Ui_Files.MovieItem import MovieItem
+from MovieItem import MovieItem
 
 
 class MovieScreen(QMainWindow):

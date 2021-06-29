@@ -9,16 +9,20 @@ def Authenticate(user, password, priv=0):
     if len(rows) != 0:
         return True
 
-    # for row in rows:
-    #     if user == row[1] and password == row[2]:
-    #         return True
+    conn.close()
 
+def AddUser(user, password, priv = 0):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"INSERT INTO Users(username, password, privilege) VALUES(?,?,?)", (user,password, priv))
+
+    conn.commit()
     conn.close()
 
 def AddNewBooking(movie, cinema, amount):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()
-    cur.execute(f"INSERT INTO Booking VALUES(?,?,?)", (movie,cinema,amount))
+    cur.execute(f"INSERT INTO Booking(movieID, cinemaID, noOfTickets) VALUES(?,?,?)", (movie,cinema,amount))
 
     conn.commit()
     conn.close()

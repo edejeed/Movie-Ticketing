@@ -2,8 +2,9 @@ import sys
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
-from Ui_Files.movie import MovieScreen
-from Ui_Files.db import *
+from movie import MovieScreen
+from MessageBox import MessageBox
+from db import *
 
 class WelcomeScreen(QMainWindow):
     def __init__(self):
@@ -64,24 +65,6 @@ class CrewLogin(QMainWindow):
             msg.setText("Please Input Informations!")
             x = msg.exec_()
         else:
-            # conn = sqlite3.connect("crew_data.db")
-            # cur = conn.cursor()
-            # cur.execute("SELECT * FROM crew_data WHERE username=?", (user,))
-            # rows = cur.fetchall()
-
-            
-            
-            # for row in rows:
-            #     if user == row[0] and password == row[1]:
-            #         moviescreen = MovieScreen()
-            #         widget.addWidget(moviescreen)
-            #         widget.setCurrentIndex(widget.currentIndex() + 1)
-            #     else:
-            #         msg = QMessageBox()
-            #         msg.setWindowTitle("Error")
-            #         msg.setText("The password you’ve entered is incorrect!")
-            #         x = msg.exec_()
-
             res = Authenticate(user, password)
 
             if res:
@@ -91,10 +74,6 @@ class CrewLogin(QMainWindow):
             else:
                 msg.setText("Incorrect username or password")
                 x = msg.exec_()
-        # except Exception as E:
-            
-        #     msg.setText("The username you entered isn’t connected to an account!")
-        #     x = msg.exec_()
 
     @staticmethod
     def signUpFunction():
@@ -116,35 +95,17 @@ class CrewSignup(QMainWindow):
         confirmpassword = self.crew_pass1.text()
 
         if len(user) == 0 or len(password) == 0 or len(confirmpassword) == 0:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error")
-            msg.setText("Please Input Informations!")
-            x = msg.exec_()
+            MessageBox.showErrorMessage("Please accomplish all fields.", "Error")
 
         elif password != confirmpassword:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error")
-            msg.setText("Passwords do not match!")
-            x = msg.exec_()
+            MessageBox.showErrorMessage("Passwords do not match!","Error")
 
         else:
-            conn = sqlite3.connect("crew_data.db")
-            cur = conn.cursor()
+            AddUser(user, password)
 
-            user_info = [user, password]
-            cur.execute('INSERT INTO crew_data (username, password) VALUES (?,?)', user_info)
+            MessageBox.showInformationMessage("Account Created.", "Success")
 
-            conn.commit()
-            conn.close()
-
-            msg = QMessageBox()
-            msg.setWindowTitle("Success")
-            msg.setText("Account Created!")
-            x = msg.exec_()
-
-            moviescreen = MovieScreen()
-            widget.addWidget(moviescreen)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
+            widget.removeWidget(self)
 
     @staticmethod
     def loginFunction(self):
@@ -188,24 +149,9 @@ class AdminLogin(QMainWindow):
 
         
         if len(user) == 0 or len(password) == 0:
-            msg.setText("Please Input Informations!")
+            msg.setText("Please Input Information!")
             x = msg.exec_()
         else:
-            # conn = sqlite3.connect("admin_data.db")
-            # cur = conn.cursor()
-            # cur.execute("SELECT * FROM admin_data WHERE username=?", (user,))
-            # rows = cur.fetchall()
-            # for row in rows:
-            #     if user == row[0] and password == row[1]:
-            #         moviescreen = MovieScreen()
-            #         widget.addWidget(moviescreen)
-            #         widget.setCurrentIndex(widget.currentIndex() + 1)
-            #     else:
-            #         msg = QMessageBox()
-            #         msg.setWindowTitle("Error")
-            #         msg.setText("The password you’ve entered is incorrect!")
-            #         x = msg.exec_()
-
             res = Authenticate(user, password, 1)
 
             if res:
@@ -215,10 +161,6 @@ class AdminLogin(QMainWindow):
             else: 
                 msg.setText("Incorrect username or password.")
                 x = msg.exec_()
-        # except Exception as E:
-        #     print(E)
-        #     msg.setText("The username you entered isn’t connected to an account!")
-        #     x = msg.exec_()
 
     def signUpfunction(self):
         AdminScreen().signup()
@@ -234,49 +176,25 @@ class AdminSignup(QMainWindow):
         self.signUpButton.clicked.connect(self.loginfunction)
 
     def signupfunction(self):
-        user = self.admin_user.text()
+        user = self.user.text()
         password = self.admin_pass.text()
         confirmpassword = self.admin_pass1.text()
 
         if len(user) == 0 or len(password) == 0 or len(confirmpassword) == 0:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error")
-            msg.setText("Please Input Informations!")
-            x = msg.exec_()
+            MessageBox.showErrorMessage("Please accomplish all fields.", "Error")
 
         elif password != confirmpassword:
-            msg = QMessageBox()
-            msg.setWindowTitle("Error")
-            msg.setText("Passwords do not match!")
-            x = msg.exec_()
+            MessageBox.showErrorMessage("Passwords do not match!", "Error")
 
         else:
-            conn = sqlite3.connect("admin_data.db")
-            cur = conn.cursor()
+            AddUser(user, password, 1)
 
-            user_info = [user, password]
-            cur.execute('INSERT INTO admin_data (username, password) VALUES (?,?)', user_info)
+            MessageBox.showInformationMessage("Account Created.", "Success")
 
-            conn.commit()
-            conn.close()
-
-            msg = QMessageBox()
-            msg.setWindowTitle("Success")
-            msg.setText("Account Created!")
-            x = msg.exec_()
-
-            moviescreen = MovieScreen()
-            widget.addWidget(moviescreen)
-            widget.setCurrentIndex(widget.currentIndex() + 1)
+            widget.removeWidget(self)
 
     def loginfunction(self):
         AdminScreen().login()
-
-
-# class MovieScreen(QMainWindow):
-#     def __init__(self):
-#         super(MovieScreen, self).__init__()
-#         loadUi("movies.ui", self)
 
 
 # main
