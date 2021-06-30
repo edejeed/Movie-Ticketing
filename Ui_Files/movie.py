@@ -6,6 +6,7 @@ from MovieItem import MovieItem
 from AddShow import AddShow
 import MovieList
 import BookingList
+import CinemaList
 import Genre
 import CrewList
 import AdminList
@@ -88,7 +89,9 @@ class MovieScreen(QMainWindow):
         self.widget.removeWidget(self)
 
     def __cinemaClicked(self):
-        pass
+        self.a = CinemaList.CinemaList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
     
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)

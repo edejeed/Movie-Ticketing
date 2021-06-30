@@ -101,6 +101,14 @@ def UpdateShowing(id):
     conn.commit()
     conn.close()
 
+def UpdateCinema(id, name, capacity):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"UPDATE Cinema SET name = ?, capacity = ? WHERE id = ?", (name, capacity,id))
+
+    conn.commit()
+    conn.close()
+
 #GETS
 def GetGenreList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")

@@ -7,6 +7,7 @@ from AddMovie import AddMovie
 import BookingList
 import CrewList
 import Genre
+import CinemaList
 import AdminList
 import movie
 from MessageBox import MessageBox
@@ -67,7 +68,9 @@ class MovieList(QMainWindow):
         self.widget.removeWidget(self)
 
     def __cinemaClicked(self):
-        pass
+        self.a = CinemaList.CinemaList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
     
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)

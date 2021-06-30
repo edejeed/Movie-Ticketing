@@ -6,6 +6,7 @@ from db import *
 from AddGenre import AddGenre
 import BookingList
 import MovieList
+import CinemaList
 import Genre
 import movie
 import CrewList
@@ -55,7 +56,9 @@ class AdminList(QMainWindow):
         self.widget.removeWidget(self)
 
     def __cinemaClicked(self):
-        pass
+        self.a = CinemaList.CinemaList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
     
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)

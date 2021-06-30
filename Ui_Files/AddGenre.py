@@ -33,7 +33,10 @@ class AddGenre(QMainWindow):
             else:
                 UpdateGenre(self.id, self.genreName.text())
                 MessageBox.showInformationMessage("Genre edited.", "Success")
+            
+            if self.p != None:
                 self.p.showGenreList()
+            
         else:
             MessageBox.showErrorMessage("Please accomplish all fields.", "Error")
 

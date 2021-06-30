@@ -3,19 +3,19 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from db import *
-from AddGenre import AddGenre
+from AddCinema import AddCinema
 import BookingList
 import MovieList
-import CinemaList
-import AdminList
+import CrewList
 import Genre
+import AdminList
 import movie
 from MessageBox import MessageBox
 
-class CrewList(QMainWindow):
+class CinemaList(QMainWindow):
     def __init__(self, widget = None):
-        super(CrewList, self).__init__()
-        loadUi("crew.ui", self)
+        super(CinemaList, self).__init__()
+        loadUi("cinema_list.ui", self)
 
         self.widget = widget
         if self.widget != None:
@@ -23,27 +23,46 @@ class CrewList(QMainWindow):
             self.widget.setFixedHeight(604)
 
         #Table
-        self.tableWidget.setColumnCount(2)
-        self.tableWidget.setHorizontalHeaderLabels(["id","username"])
+        self.tableWidget.setColumnCount(3)
+        self.tableWidget.setHorizontalHeaderLabels(["id","Cinema Name", "Capacity"])
         self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
+        self.tableWidget.doubleClicked.connect(self.openInfo)
+
+        # self.deleteButton.clicked.connect(self.__deleteClicked)
+        # self.searchButton.clicked.connect(self.__searchClicked)
+        self.addCinema.clicked.connect(self.addCinemaClicked)
 
         self.showButton.clicked.connect(self.__showClicked)
-        self.ticketsButton.clicked.connect(self.__ticketsClicked)
-        self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.genreButton.clicked.connect(self.__genreClicked)
+        self.ticketsButton.clicked.connect(self.__ticketsClicked)
         self.movieButton.clicked.connect(self.__movieButtonClicked)
+        self.crewButton.clicked.connect(self.__crewClicked)
         self.adminButton.clicked.connect(self.__adminClicked)
+        
+        self.showCinemaList()
 
-        self.loadCrew()
-    
-    def loadCrew(self):
-        res = GetUserList(0)
-        self.tableWidget.setRowCount(len(res))
+    def addCinemaClicked(self):
+        self.b = AddCinema(self)
+        self.b.show()
 
-        for crew in enumerate(res):
-            self.tableWidget.setItem(crew[0], 0, QtWidgets.QTableWidgetItem(str(crew[1][0])))
-            self.tableWidget.setItem(crew[0], 1, QtWidgets.QTableWidgetItem(str(crew[1][1])))
+    def showCinemaList(self, data = []):
+        if data != []:
+            cinemaList = data
+        else:
+            cinemaList = GetCinemaList()
+        # print(genreList)
+        self.tableWidget.setRowCount(len(cinemaList))
+
+        for cinema in enumerate(cinemaList):
+            self.tableWidget.setItem(cinema[0], 0, QtWidgets.QTableWidgetItem(str(cinema[1][0])))
+            self.tableWidget.setItem(cinema[0], 1, QtWidgets.QTableWidgetItem(str(cinema[1][1])))
+            self.tableWidget.setItem(cinema[0], 2, QtWidgets.QTableWidgetItem(str(cinema[1][2])))
+
+    def openInfo(self):
+        id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        self.b = AddCinema(self, "e", id)
+        self.b.show()
     
     def __showClicked(self):
         self.a = movie.MovieScreen(self.widget)
@@ -54,19 +73,19 @@ class CrewList(QMainWindow):
         self.a = MovieList.MovieList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
-
-    def __cinemaClicked(self):
-        self.a = CinemaList.CinemaList(self.widget)
+    
+    def __ticketsClicked(self):
+        self.a = BookingList.BookingList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
-    
+
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
-    def __ticketsClicked(self):
-        self.a = BookingList.BookingList(self.widget)
+    def __crewClicked(self):
+        self.a = CrewList.CrewList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
     
@@ -75,10 +94,9 @@ class CrewList(QMainWindow):
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    genre = CrewList()
+    genre = CinemaList()
     genre.show()
     try:
         sys.exit(app.exec_())

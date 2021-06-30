@@ -81,14 +81,62 @@ System</string>
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="movieButton">
+    <widget class="QPushButton" name="ticketsButton">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>130</y>
+       <y>199</y>
        <width>131</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#ticketsButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#ticketsButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Bookings</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/tickets.png</normaloff>../img/tickets.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="movieButton">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>160</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#movieButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#movieButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
      </property>
      <property name="text">
       <string>Movies</string>
@@ -104,69 +152,28 @@ System</string>
       </size>
      </property>
      <property name="flat">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="movieButton_2">
+    <widget class="QPushButton" name="crewButton">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>170</y>
-       <width>131</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Tickets</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../img/tickets.png</normaloff>../img/tickets.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>40</width>
-       <height>40</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="movieButton_3">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>230</y>
+       <x>19</x>
+       <y>450</y>
        <width>131</width>
        <height>41</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Admin</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../img/admin.png</normaloff>../img/admin.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>40</width>
-       <height>40</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="movieButton_4">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>270</y>
-       <width>131</width>
-       <height>41</height>
-      </rect>
+     <property name="styleSheet">
+      <string notr="true">#crewButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#crewButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
      </property>
      <property name="text">
       <string>Crew</string>
@@ -182,14 +189,88 @@ System</string>
       </size>
      </property>
      <property name="flat">
-      <bool>true</bool>
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="genreButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>290</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#genreButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#genreButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Genres</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/genre.png</normaloff>../img/genre.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="showButton">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>120</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#showButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#showButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Shows</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/movies.png</normaloff>../img/movies.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="movieButton_5">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>430</y>
+       <x>19</x>
+       <y>540</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -209,6 +290,80 @@ System</string>
      </property>
      <property name="flat">
       <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="adminButton">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>400</y>
+       <width>131</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#adminButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#adminButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Admin</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/admin.png</normaloff>../img/admin.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="cinemaButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>240</y>
+       <width>131</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#cinemaButton{
+background-color: TRANSPARENT;
+border: TRANSPARENT;
+border-radius: 15px;
+}
+
+#cinemaButton:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Cinema</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/cinema.png</normaloff>../img/cinema.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>40</width>
+       <height>40</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
      </property>
     </widget>
    </widget>
@@ -351,6 +506,45 @@ background-color: #fffcf6;
       <pixmap>../img/cinemalist.png</pixmap>
      </property>
      <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addCinema">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>60</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#addTicket{
+border: 1px white;
+border-radius: 10px;
+}
+
+#addTicket:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Add Cinema</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/addticket.png</normaloff>../img/addticket.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
       <bool>true</bool>
      </property>
     </widget>

@@ -5,6 +5,7 @@ from PyQt5.uic import loadUi
 import MovieList
 import movie
 import Genre
+import CinemaList
 import CrewList
 import AdminList
 from db import *
@@ -54,7 +55,9 @@ class BookingList(QMainWindow):
         self.widget.removeWidget(self)
 
     def __cinemaClicked(self):
-        pass
+        self.a = CinemaList.CinemaList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
     
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)
