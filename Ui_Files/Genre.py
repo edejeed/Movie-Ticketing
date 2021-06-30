@@ -5,7 +5,10 @@ from PyQt5.uic import loadUi
 from db import *
 from AddGenre import AddGenre
 import BookingList
+import CinemaList
 import MovieList
+import CrewList
+import AdminList
 import movie
 from MessageBox import MessageBox
 
@@ -28,13 +31,20 @@ class Genre(QMainWindow):
 
         self.deleteButton.clicked.connect(self.__deleteClicked)
         self.searchButton.clicked.connect(self.__searchClicked)
+        self.addGenre.clicked.connect(self.__addGenreClicked)
 
         self.showButton.clicked.connect(self.__showClicked)
         self.ticketsButton.clicked.connect(self.__ticketsClicked)
         self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.movieButton.clicked.connect(self.__movieButtonClicked)
+        self.crewButton.clicked.connect(self.__crewClicked)
+        self.adminButton.clicked.connect(self.__adminClicked)
         
         self.showGenreList()
+
+    def __addGenreClicked(self):
+        self.b = AddGenre(self)
+        self.b.show()
 
     def __searchClicked(self):
         l = GetGenreList(f"WHERE genre LIKE '%{self.lineEdit.text()}%'")
@@ -82,13 +92,24 @@ class Genre(QMainWindow):
         self.widget.removeWidget(self)
 
     def __cinemaClicked(self):
-        pass
+        self.a = CinemaList.CinemaList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
     
     def __ticketsClicked(self):
         self.a = BookingList.BookingList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
+    def __crewClicked(self):
+        self.a = CrewList.CrewList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+    
+    def __adminClicked(self):
+        self.a = AdminList.AdminList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

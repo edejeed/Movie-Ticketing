@@ -64,6 +64,10 @@ class AddMovie(QMainWindow):
                     AddMovieGenre(self.id, mg)
 
                 MessageBox.showInformationMessage("Movie updated.", "Success")
+            
+            if self.parent != None:
+                self.parent.loadMovieList()
+
         else:
             MessageBox.showErrorMessage("Please accomplish all fields and make sure to add a genre.", "Error") 
             

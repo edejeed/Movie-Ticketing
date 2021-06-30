@@ -3,75 +3,82 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
 from db import *
-from AddMovie import AddMovie
+from AddCinema import AddCinema
 import BookingList
+import MovieList
 import CrewList
 import Genre
-import CinemaList
 import AdminList
 import movie
 from MessageBox import MessageBox
 
-class MovieList(QMainWindow):
+class CinemaList(QMainWindow):
     def __init__(self, widget = None):
-        super(MovieList, self).__init__()
-        loadUi("movie_list.ui", self)
+        super(CinemaList, self).__init__()
+        loadUi("cinema_list.ui", self)
 
         self.widget = widget
         if self.widget != None:
-            self.widget.setFixedWidth(810)
-            self.widget.setFixedHeight(635)
+            self.widget.setFixedWidth(804)
+            self.widget.setFixedHeight(604)
 
+        #Table
+        self.tableWidget.setColumnCount(3)
+        self.tableWidget.setHorizontalHeaderLabels(["id","Cinema Name", "Capacity"])
         self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableWidget.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
         self.tableWidget.doubleClicked.connect(self.openInfo)
 
+        # self.deleteButton.clicked.connect(self.__deleteClicked)
+        # self.searchButton.clicked.connect(self.__searchClicked)
+        self.addCinema.clicked.connect(self.addCinemaClicked)
+
         self.showButton.clicked.connect(self.__showClicked)
-        self.ticketsButton.clicked.connect(self.__ticketsClicked)
-        self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.genreButton.clicked.connect(self.__genreClicked)
+        self.ticketsButton.clicked.connect(self.__ticketsClicked)
+        self.movieButton.clicked.connect(self.__movieButtonClicked)
         self.crewButton.clicked.connect(self.__crewClicked)
         self.adminButton.clicked.connect(self.__adminClicked)
+        
+        self.showCinemaList()
 
-        self.addMovie.clicked.connect(self.__addClicked)
+    def addCinemaClicked(self):
+        self.b = AddCinema(self)
+        self.b.show()
 
-        self.id = []
-        self.loadMovieList()
-    
-    def __addClicked(self):
-        self.a = AddMovie(self)
-        self.a.show()
+    def showCinemaList(self, data = []):
+        if data != []:
+            cinemaList = data
+        else:
+            cinemaList = GetCinemaList()
+        # print(genreList)
+        self.tableWidget.setRowCount(len(cinemaList))
 
-    def loadMovieList(self):
-        res = GetMovieList()
-        self.id = []
-        self.tableWidget.setRowCount(len(res))
-
-        for movie in enumerate(res):
-            self.id.append(movie[1][0])
-            self.tableWidget.setItem(movie[0], 0, QtWidgets.QTableWidgetItem(str(movie[1][1])))
-            self.tableWidget.setItem(movie[0], 1, QtWidgets.QTableWidgetItem(str(movie[1][2])))
+        for cinema in enumerate(cinemaList):
+            self.tableWidget.setItem(cinema[0], 0, QtWidgets.QTableWidgetItem(str(cinema[1][0])))
+            self.tableWidget.setItem(cinema[0], 1, QtWidgets.QTableWidgetItem(str(cinema[1][1])))
+            self.tableWidget.setItem(cinema[0], 2, QtWidgets.QTableWidgetItem(str(cinema[1][2])))
 
     def openInfo(self):
-        id = self.id[self.tableWidget.currentRow()]
-        self.a = AddMovie(self, "e", id)
-        self.a.show()
-
+        id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+        self.b = AddCinema(self, "e", id)
+        self.b.show()
+    
     def __showClicked(self):
         self.a = movie.MovieScreen(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
-
+    
+    def __movieButtonClicked(self):
+        self.a = MovieList.MovieList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+    
     def __ticketsClicked(self):
         self.a = BookingList.BookingList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
-    def __cinemaClicked(self):
-        self.a = CinemaList.CinemaList(self.widget)
-        self.widget.addWidget(self.a)
-        self.widget.removeWidget(self)
-    
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)
         self.widget.addWidget(self.a)
@@ -89,7 +96,7 @@ class MovieList(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    genre = MovieList()
+    genre = CinemaList()
     genre.show()
     try:
         sys.exit(app.exec_())

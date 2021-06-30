@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>810</width>
-    <height>604</height>
+    <height>635</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>171</width>
-      <height>611</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -85,7 +85,7 @@ System</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>540</y>
+       <y>570</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -111,7 +111,7 @@ System</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>400</y>
+       <y>430</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -148,7 +148,7 @@ background-color: rgb(236, 236, 236);
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>450</y>
+       <y>480</y>
        <width>131</width>
        <height>41</height>
       </rect>
@@ -373,7 +373,7 @@ background-color: rgb(236, 236, 236);
       <x>160</x>
       <y>0</y>
       <width>651</width>
-      <height>611</height>
+      <height>641</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -388,7 +388,7 @@ background-color: #fffcf6;
      <property name="geometry">
       <rect>
        <x>30</x>
-       <y>110</y>
+       <y>140</y>
        <width>611</width>
        <height>481</height>
       </rect>
@@ -506,6 +506,45 @@ background-color: #fffcf6;
       <pixmap>../img/movielist.png</pixmap>
      </property>
      <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addMovie">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>90</y>
+       <width>101</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#addTicket{
+border: 1px white;
+border-radius: 10px;
+}
+
+#addTicket:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Add Movie</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/addticket.png</normaloff>../img/addticket.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
       <bool>true</bool>
      </property>
     </widget>

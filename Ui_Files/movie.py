@@ -6,7 +6,10 @@ from MovieItem import MovieItem
 from AddShow import AddShow
 import MovieList
 import BookingList
+import CinemaList
 import Genre
+import CrewList
+import AdminList
 from db import *
 
 
@@ -27,6 +30,8 @@ class MovieScreen(QMainWindow):
         self.ticketsButton.clicked.connect(self.__ticketsClicked)
         self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.genreButton.clicked.connect(self.__genreClicked)
+        self.crewButton.clicked.connect(self.__crewClicked)
+        self.adminButton.clicked.connect(self.__adminClicked)
         
         self.pageN = 1
         self.widgs = [MovieItem()]*6
@@ -84,10 +89,22 @@ class MovieScreen(QMainWindow):
         self.widget.removeWidget(self)
 
     def __cinemaClicked(self):
-        pass
+        self.a = CinemaList.CinemaList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
     
     def __genreClicked(self):
         self.a = Genre.Genre(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+
+    def __crewClicked(self):
+        self.a = CrewList.CrewList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+    
+    def __adminClicked(self):
+        self.a = AdminList.AdminList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
