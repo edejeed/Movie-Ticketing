@@ -85,6 +85,22 @@ def UpdateMovie(id, title, syn):
     conn.commit()
     conn.close()
 
+def UpdateShow(id, mID, cID, date, time, showing):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"UPDATE MovieShowsAt SET movieID = ?, cinemaID = ?, date = ?, time = ?, isShowing = ? WHERE showID = ?", (mID,cID, date, time, showing, id))
+
+    conn.commit()
+    conn.close()
+
+def UpdateShowing(id):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute(f"UPDATE MovieShowsAt SET isShowing = ? WHERE showID = ?", (0,id))
+
+    conn.commit()
+    conn.close()
+
 #GETS
 def GetGenreList(cond = ""):
     conn = sqlite3.connect("MovieTicketingSystem.db")
@@ -147,6 +163,15 @@ def GetShow(page, cond = ""):
     cur = conn.cursor()
 
     res = cur.execute(f"SELECT title, synopsis, date, time, name, showID FROM Movie AS mov INNER JOIN MovieShowsAt AS show ON mov.id = show.movieID INNER JOIN Cinema AS cin ON show.cinemaID = cin.id WHERE show.isShowing = true LIMIT 6 OFFSET {(page-1)*6}").fetchall()
+    conn.close()
+
+    return res
+
+def GetShowInfo(id, cond = ""):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+
+    res = cur.execute(f"SELECT * FROM MovieShowsAt WHERE showID = {id}").fetchall()
     conn.close()
 
     return res

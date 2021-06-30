@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>273</width>
-    <height>376</height>
+    <height>405</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -275,19 +275,47 @@ border: TRANSPARENT;
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">#bookTicketButton{
+     <string notr="true">#enter{
 background-color: #ccdde8;
 border: 1px white;
 border-radius: 20px;
 }
-#bookTicketButton:hover{
+#enter:hover{
 background-color: #ccdde8;
 border: 1px black;
 border-radius: 20px;
 }</string>
     </property>
     <property name="text">
-     <string>Add</string>
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>355</y>
+      <width>251</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#delB{
+background-color: #ccdde8;
+border: 1px white;
+border-radius: 20px;
+}
+#delB:hover{
+background-color: #ccdde8;
+border: 1px black;
+border-radius: 20px;
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete</string>
     </property>
    </widget>
   </widget>

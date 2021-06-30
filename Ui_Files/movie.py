@@ -55,7 +55,7 @@ class MovieScreen(QMainWindow):
 
         x = 0
         for show in res:
-            self.widgs[x] = MovieItem(show)
+            self.widgs[x] = MovieItem(show, self)
             self.gridLayout.addWidget(self.widgs[x], self.__gridY, self.__gridX)
         
             if self.__gridX == 2:
