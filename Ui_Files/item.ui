@@ -46,8 +46,21 @@ border: 3px solid rgb(85, 255, 255);
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Century Gothic</family>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#title{
+font: 75 9pt &quot;Century Gothic&quot;;
+font-weight: bold;
+}</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
     </property>
     <property name="text">
      <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
