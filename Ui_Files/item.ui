@@ -22,11 +22,17 @@
      <height>271</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">#movieBG{
 background-color: #edece8;
-border: 1px white;
+border: 3px white;
 border-radius: 20px;
+}
+#movieBG:hover{
+border: 3px solid rgb(85, 255, 255);
 }</string>
    </property>
    <widget class="QLabel" name="title">
@@ -40,8 +46,21 @@ border-radius: 20px;
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <family>Century Gothic</family>
+      <pointsize>9</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#title{
+font: 75 9pt &quot;Century Gothic&quot;;
+font-weight: bold;
+}</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhNone</set>
     </property>
     <property name="text">
      <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;

@@ -58,24 +58,49 @@ border-radius: 20px;
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>80</y>
-      <width>75</width>
+      <x>363</x>
+      <y>82</y>
+      <width>25</width>
       <height>23</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">#searchButton{
+background-color:white;
+border: TRANSPARENT;
+border-radius: 10px;
+}</string>
+    </property>
     <property name="text">
-     <string>Search</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../img/search.png</normaloff>../img/search.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
     </property>
    </widget>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>200</x>
-      <y>80</y>
-      <width>113</width>
+      <x>211</x>
+      <y>83</y>
+      <width>141</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lineEdit{
+border: TRANSPARENT;
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>Search</string>
     </property>
    </widget>
    <widget class="QWidget" name="navigationBG" native="true">
@@ -431,6 +456,29 @@ background-color: rgb(236, 236, 236);
      </property>
     </widget>
    </widget>
+   <widget class="QWidget" name="rect" native="true">
+    <property name="geometry">
+     <rect>
+      <x>202</x>
+      <y>77</y>
+      <width>192</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#rect{
+background-color: white;
+border: 2px solid #ccdde8;
+border-radius: 15px;
+}</string>
+    </property>
+   </widget>
+   <zorder>rect</zorder>
+   <zorder>genreList</zorder>
+   <zorder>deleteButton</zorder>
+   <zorder>searchButton</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>navigationBG</zorder>
   </widget>
  </widget>
  <resources/>

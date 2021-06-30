@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87cf92fc-496e-4383-8eb8-c7c33b82c26d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/AddCinema.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/AddCinema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/AddGenre.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/AddGenre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/AddMovie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/AddMovie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/BookTicket.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/BookTicket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/Genre.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/Genre.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/admin_signup.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/admin_signup.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/crew_login.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/crew_login.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/crew_signup.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/crew_signup.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ui_Files/movies.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/movies.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie.py" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/movie.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ui_Files/item.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Ui_Files/item.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,22 +211,22 @@
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
     <state x="1946" y="-160" key="FileChooserDialogImpl/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624822365902" />
-    <state width="1601" height="233" key="GridCell.Tab.0.bottom" timestamp="1624943151399">
+    <state width="1601" height="285" key="GridCell.Tab.0.bottom" timestamp="1625046590185">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
-    <state width="1601" height="233" key="GridCell.Tab.0.center" timestamp="1624943151399">
+    <state width="1601" height="285" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1625046590185" />
+    <state width="1601" height="285" key="GridCell.Tab.0.center" timestamp="1625046590185">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.center/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
-    <state width="1601" height="233" key="GridCell.Tab.0.left" timestamp="1624943151399">
+    <state width="1601" height="285" key="GridCell.Tab.0.center/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1625046590185" />
+    <state width="1601" height="285" key="GridCell.Tab.0.left" timestamp="1625046590185">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.left/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
-    <state width="1601" height="233" key="GridCell.Tab.0.right" timestamp="1624943151399">
+    <state width="1601" height="285" key="GridCell.Tab.0.left/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1625046590185" />
+    <state width="1601" height="285" key="GridCell.Tab.0.right" timestamp="1625046590185">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
-    <state width="1601" height="233" key="GridCell.Tab.0.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1624943151399" />
+    <state width="1601" height="285" key="GridCell.Tab.0.right/0.0.1366.738/1366.-349.1600.870@1366.-349.1600.870" timestamp="1625046590185" />
     <state width="1601" height="288" key="GridCell.Tab.1.bottom" timestamp="1624818324756">
       <screen x="1366" y="-349" width="1600" height="870" />
     </state>
