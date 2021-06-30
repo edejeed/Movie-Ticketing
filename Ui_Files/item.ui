@@ -22,11 +22,17 @@
      <height>271</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <property name="styleSheet">
     <string notr="true">#movieBG{
 background-color: #edece8;
-border: 1px white;
+border: 3px white;
 border-radius: 20px;
+}
+#movieBG:hover{
+border: 3px solid rgb(85, 255, 255);
 }</string>
    </property>
    <widget class="QLabel" name="title">
