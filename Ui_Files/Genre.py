@@ -6,6 +6,8 @@ from db import *
 from AddGenre import AddGenre
 import BookingList
 import MovieList
+import CrewList
+import AdminList
 import movie
 from MessageBox import MessageBox
 
@@ -33,6 +35,8 @@ class Genre(QMainWindow):
         self.ticketsButton.clicked.connect(self.__ticketsClicked)
         self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.movieButton.clicked.connect(self.__movieButtonClicked)
+        self.crewButton.clicked.connect(self.__crewClicked)
+        self.adminButton.clicked.connect(self.__adminClicked)
         
         self.showGenreList()
 
@@ -89,6 +93,15 @@ class Genre(QMainWindow):
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
+    def __crewClicked(self):
+        self.a = CrewList.CrewList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
+    
+    def __adminClicked(self):
+        self.a = AdminList.AdminList(self.widget)
+        self.widget.addWidget(self.a)
+        self.widget.removeWidget(self)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

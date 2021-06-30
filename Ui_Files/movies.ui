@@ -417,9 +417,9 @@ background-color: #fffcf6;
     <widget class="QPushButton" name="addTicket">
      <property name="geometry">
       <rect>
-       <x>460</x>
+       <x>580</x>
        <y>50</y>
-       <width>41</width>
+       <width>101</width>
        <height>41</height>
       </rect>
      </property>
@@ -437,89 +437,11 @@ background-color: rgb(236, 236, 236);
 }</string>
      </property>
      <property name="text">
-      <string/>
+      <string>Add Show</string>
      </property>
      <property name="icon">
       <iconset>
        <normaloff>../img/addticket.png</normaloff>../img/addticket.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="editButton">
-     <property name="geometry">
-      <rect>
-       <x>500</x>
-       <y>50</y>
-       <width>41</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#editButton{
-border: 1px white;
-border-radius: 10px;
-}
-
-#editButton:hover{
-background-color: rgb(236, 236, 236);
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../img/editTicket.png</normaloff>../img/editTicket.png</iconset>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="deleteButton">
-     <property name="geometry">
-      <rect>
-       <x>537</x>
-       <y>50</y>
-       <width>41</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#deleteButton{
-border: 1px white;
-border-radius: 10px;
-}
-
-#deleteButton:hover{
-background-color: rgb(236, 236, 236);
-}</string>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../img/deleteTicket.png</normaloff>../img/deleteTicket.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -622,43 +544,6 @@ border-radius: 20px;
       <size>
        <width>35</width>
        <height>35</height>
-      </size>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="bookTicket">
-     <property name="geometry">
-      <rect>
-       <x>590</x>
-       <y>55</y>
-       <width>81</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="cursor">
-      <cursorShape>PointingHandCursor</cursorShape>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">#bookTicket{
-background-color: #ccdde8;
-border: 1px solid #ccdde8;
-border-radius: 15px;
-}
-
-#bookTicket:hover{
-background-color: white;
-border: 1px solid sky blue;
-}</string>
-     </property>
-     <property name="text">
-      <string>Book A Ticket</string>
-     </property>
-     <property name="iconSize">
-      <size>
-       <width>30</width>
-       <height>30</height>
       </size>
      </property>
      <property name="flat">
@@ -785,12 +670,9 @@ border-radius: 15px;
     <zorder>rect</zorder>
     <zorder>label</zorder>
     <zorder>addTicket</zorder>
-    <zorder>editButton</zorder>
-    <zorder>deleteButton</zorder>
     <zorder>stackedWidget</zorder>
     <zorder>prevButton</zorder>
     <zorder>nextButton</zorder>
-    <zorder>bookTicket</zorder>
     <zorder>next</zorder>
     <zorder>back</zorder>
     <zorder>page_4</zorder>

@@ -191,6 +191,15 @@ def GetMovieGenre(cond = ""):
 
     return res
 
+def GetUserList(priv, cond = ""):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+
+    res = cur.execute(f"SELECT * FROM Users WHERE privilege = {priv} {cond}").fetchall()
+    conn.close()
+
+    return res
+
 #Deletes
 def DeleteGenre(id):
     conn = sqlite3.connect("MovieTicketingSystem.db")
