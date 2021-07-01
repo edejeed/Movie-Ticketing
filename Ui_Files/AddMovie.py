@@ -23,6 +23,10 @@ class AddMovie(QMainWindow):
             self.__loadEdit()
 
         self.save.clicked.connect(self.__addMovie)
+        self.back.clicked.connect(self.__backButtonClicked)
+
+    def __backButtonClicked(self):
+        self.hide()
 
     def __loadGenre(self):
         res = GetGenreList()

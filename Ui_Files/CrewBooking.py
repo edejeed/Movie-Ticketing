@@ -23,6 +23,7 @@ class CrewBooking(QMainWindow):
         self.bookingList.setHorizontalHeaderLabels(["Movie","Cinema", "Number of Tickets"])
         self.bookingList.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.bookingList.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
+        self.logoutButton.clicked.connect(self.logOut)
 
         self.movieButton.clicked.connect(self.__loadMovies)
 
@@ -41,6 +42,12 @@ class CrewBooking(QMainWindow):
         self.a = CrewView.CrewView(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
+
+    def logOut(self):
+        self.widget.setFixedHeight(604)
+        self.widget.setFixedWidth(804)
+        for i in range(self.widget.count()):
+            self.widget.removeWidget(self.widget.widget(1))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

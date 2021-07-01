@@ -32,6 +32,7 @@ class MovieList(QMainWindow):
         self.genreButton.clicked.connect(self.__genreClicked)
         self.crewButton.clicked.connect(self.__crewClicked)
         self.adminButton.clicked.connect(self.__adminClicked)
+        self.logoutButton.clicked.connect(self.logOut)
 
         self.addMovie.clicked.connect(self.__addClicked)
 
@@ -86,6 +87,12 @@ class MovieList(QMainWindow):
         self.a = AdminList.AdminList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
+
+    def logOut(self):
+        self.widget.setFixedHeight(604)
+        self.widget.setFixedWidth(804)
+        for i in range(self.widget.count()):
+            self.widget.removeWidget(self.widget.widget(1))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

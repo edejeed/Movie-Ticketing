@@ -34,6 +34,7 @@ class CrewList(QMainWindow):
         self.genreButton.clicked.connect(self.__genreClicked)
         self.movieButton.clicked.connect(self.__movieButtonClicked)
         self.adminButton.clicked.connect(self.__adminClicked)
+        self.logoutButton.clicked.connect(self.logOut)
 
         self.loadCrew()
     
@@ -75,6 +76,11 @@ class CrewList(QMainWindow):
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
+    def logOut(self):
+        self.widget.setFixedHeight(604)
+        self.widget.setFixedWidth(804)
+        for i in range(self.widget.count()):
+            self.widget.removeWidget(self.widget.widget(1))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -81,7 +81,7 @@ System</string>
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="movieButton_5">
+    <widget class="QPushButton" name="logoutButton">
      <property name="geometry">
       <rect>
        <x>20</x>

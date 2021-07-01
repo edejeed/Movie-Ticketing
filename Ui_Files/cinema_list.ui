@@ -266,7 +266,7 @@ background-color: rgb(236, 236, 236);
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="movieButton_5">
+    <widget class="QPushButton" name="logoutButton">
      <property name="geometry">
       <rect>
        <x>19</x>
