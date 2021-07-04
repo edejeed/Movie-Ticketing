@@ -14,8 +14,8 @@ can just select the preferred show, seat and schedule of the customer.
 
 **Features:**
 
--List of Available shows
+* List of Available shows
 
--Ticket Availability 
+* Ticket Availability 
 
--Available Seat
+* Available Seat
