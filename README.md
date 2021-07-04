@@ -1,7 +1,7 @@
 # Movie-Ticketing-System
 
-**Description:** 
 
+**Description:** 
 Having better access to key data in a centralized and systematic view increases
 customer satisfaction by giving your customers what they want when it comes to the
 seat preference.  Cinema Ticketing System is a desktop database application that
@@ -12,10 +12,8 @@ the week, the capacity of the theater hall and the schedules of the shows. Secon
 crew, the crews can operate the reservation and ticketing process with ease since they
 can just select the preferred show, seat and schedule of the customer. 
 
+
 **Features:**
-
 * List of Available shows
-
 * Ticket Availability 
-
 * Available Seat
