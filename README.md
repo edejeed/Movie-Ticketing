@@ -1,6 +1,6 @@
 # Movie-Ticketing-System
 
-**Description:**
+**Description:** \n
 Having better access to key data in a centralized and systematic view increases
 customer satisfaction by giving your customers what they want when it comes to the
 seat preference.  Cinema Ticketing System is a desktop database application that
