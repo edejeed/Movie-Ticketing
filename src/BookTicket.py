@@ -8,7 +8,7 @@ from MessageBox import MessageBox
 class BookTicket(QMainWindow):
     def __init__(self):
         super(BookTicket, self).__init__()
-        loadUi("book-a-ticket.ui", self)
+        loadUi("../Ui_Files/book-a-ticket.ui", self)
 
         self.movieTitle.currentIndexChanged.connect(self.__cbChanged)
         self.cinemaName.currentIndexChanged.connect(self.__cbChanged)

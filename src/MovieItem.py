@@ -7,7 +7,7 @@ class MovieItem(QtWidgets.QWidget):
 
     def __init__(self, show = ["","","","","",""], parent = None): 
         super(MovieItem,self).__init__()
-        loadUi("item.ui", self)
+        loadUi("../Ui_Files/item.ui", self)
         self.parent = parent
 
         self.id = show[5]
@@ -20,4 +20,3 @@ class MovieItem(QtWidgets.QWidget):
         self.a = AddShow(self, "e", self.id, self.parent)
         self.a.show()
         super(MovieItem,self).mouseReleaseEvent(event)
-

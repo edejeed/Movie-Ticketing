@@ -1,50 +1,51 @@
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QMessageBox, QApplication, QMainWindow
 from PyQt5.uic import loadUi
-import MovieList
-import movie
-import Genre
-import CinemaList
-import CrewList
-import AdminList
 from db import *
+from AddGenre import AddGenre
+import BookingList
+import MovieList
+import CinemaList
+import Genre
+import movie
+import CrewList
+from MessageBox import MessageBox
 
-
-class BookingList(QMainWindow):
+class AdminList(QMainWindow):
     def __init__(self, widget = None):
-        super(BookingList, self).__init__()
-        loadUi("tickets.ui", self)
+        super(AdminList, self).__init__()
+        loadUi("../Ui_Files/admin.ui", self)
 
         self.widget = widget
         if self.widget != None:
-            self.widget.setFixedHeight(600)
-            self.widget.setFixedWidth(800)
+            self.widget.setFixedWidth(804)
+            self.widget.setFixedHeight(604)
 
-        self.bookingList.setColumnCount(3)
-        self.bookingList.setHorizontalHeaderLabels(["Movie","Cinema", "Number of Tickets"])
-        self.bookingList.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
-        self.bookingList.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
+        #Table
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setHorizontalHeaderLabels(["id","username"])
+        self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.tableWidget.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
 
-        self.movieButton.clicked.connect(self.__movieButtonClicked)
         self.showButton.clicked.connect(self.__showClicked)
+        self.ticketsButton.clicked.connect(self.__ticketsClicked)
         self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.genreButton.clicked.connect(self.__genreClicked)
+        self.movieButton.clicked.connect(self.__movieButtonClicked)
         self.crewButton.clicked.connect(self.__crewClicked)
-        self.adminButton.clicked.connect(self.__adminClicked)
         self.logoutButton.clicked.connect(self.logOut)
 
-        self.__loadBookings()
+        self.loadCrew()
     
-    def __loadBookings(self):
-        res = GetMovieCinemaOfBooking()
-        
-        self.bookingList.setRowCount(len(res))
-        for booking in enumerate(res):
-            self.bookingList.setItem(booking[0], 0, QtWidgets.QTableWidgetItem(str(booking[1][0])))
-            self.bookingList.setItem(booking[0], 1, QtWidgets.QTableWidgetItem(str(booking[1][1])))
-            self.bookingList.setItem(booking[0], 2, QtWidgets.QTableWidgetItem(str(booking[1][2])))
+    def loadCrew(self):
+        res = GetUserList(1)
+        self.tableWidget.setRowCount(len(res))
 
+        for crew in enumerate(res):
+            self.tableWidget.setItem(crew[0], 0, QtWidgets.QTableWidgetItem(str(crew[1][0])))
+            self.tableWidget.setItem(crew[0], 1, QtWidgets.QTableWidgetItem(str(crew[1][1])))
+    
     def __showClicked(self):
         self.a = movie.MovieScreen(self.widget)
         self.widget.addWidget(self.a)
@@ -65,13 +66,13 @@ class BookingList(QMainWindow):
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
-    def __crewClicked(self):
-        self.a = CrewList.CrewList(self.widget)
+    def __ticketsClicked(self):
+        self.a = BookingList.BookingList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
     
-    def __adminClicked(self):
-        self.a = AdminList.AdminList(self.widget)
+    def __crewClicked(self):
+        self.a = CrewList.CrewList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
@@ -81,14 +82,11 @@ class BookingList(QMainWindow):
         for i in range(self.widget.count()):
             self.widget.removeWidget(self.widget.widget(1))
 
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    movies = BookingList()
-    widget = QtWidgets.QStackedWidget()
-    widget.addWidget(movies)
-    widget.setFixedHeight(600)
-    widget.setFixedWidth(800)
-    widget.show()
+    genre = AdminList()
+    genre.show()
     try:
         sys.exit(app.exec_())
     except:

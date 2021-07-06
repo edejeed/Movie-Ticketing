@@ -8,7 +8,7 @@ from MessageBox import MessageBox
 class AddShow(QMainWindow):
     def __init__(self, parent=None, mode = "a", id=None, p=None):
         super(AddShow, self).__init__()
-        loadUi("add_showing.ui", self)
+        loadUi("../Ui_Files/add_showing.ui", self)
 
         self.p = p
         self.parent = parent

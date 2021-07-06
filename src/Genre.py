@@ -15,7 +15,7 @@ from MessageBox import MessageBox
 class Genre(QMainWindow):
     def __init__(self, widget = None):
         super(Genre, self).__init__()
-        loadUi("genre-list.ui", self)
+        loadUi("../Ui_Files/genre-list.ui", self)
 
         self.widget = widget
         if self.widget != None:

@@ -8,7 +8,7 @@ from MessageBox import MessageBox
 class AddCinema(QMainWindow):
     def __init__(self, parent = None, mode = "a", id = None):
         super(AddCinema, self).__init__()
-        loadUi("add_cinema.ui", self)
+        loadUi("../Ui_Files/add_cinema.ui", self)
         self.addCinemaButton.clicked.connect(self.__addCinemaClicked)
 
         self.parent = parent

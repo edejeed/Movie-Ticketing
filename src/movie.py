@@ -16,7 +16,7 @@ from db import *
 class MovieScreen(QMainWindow):
     def __init__(self, widget = None):
         super(MovieScreen, self).__init__()
-        loadUi("movies.ui", self)
+        loadUi("../Ui_Files/movies.ui", self)
 
         self.widget = widget
         if self.widget != None:

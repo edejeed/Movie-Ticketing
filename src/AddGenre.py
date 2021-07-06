@@ -8,7 +8,7 @@ from MessageBox import MessageBox
 class AddGenre(QMainWindow):
     def __init__(self, parent = None, mode="a", id=None):
         super(AddGenre, self).__init__(parent)
-        loadUi("add_genre.ui", self)
+        loadUi("../Ui_Files/add_genre.ui", self)
 
         self.p = parent
         self.mode = mode

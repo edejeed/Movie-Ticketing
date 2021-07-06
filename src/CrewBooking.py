@@ -9,7 +9,7 @@ from db import *
 class CrewBooking(QMainWindow):
     def __init__(self, widget = None):
         super(CrewBooking, self).__init__()
-        loadUi("crewbooking.ui", self)
+        loadUi("../Ui_Files/crewbooking.ui", self)
 
         self.widget = widget
 

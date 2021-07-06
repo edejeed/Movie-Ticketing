@@ -10,7 +10,7 @@ from db import *
 class WelcomeScreen(QMainWindow):
     def __init__(self):
         super(WelcomeScreen, self).__init__()
-        loadUi("choose-role.ui", self)
+        loadUi("../Ui_Files/choose-role.ui", self)
         self.admin.clicked.connect(self.gotoadmin)
         self.crew.clicked.connect(self.gotocrew)
 
@@ -30,7 +30,7 @@ class WelcomeScreen(QMainWindow):
 class CrewScreen(QMainWindow):
     def __init__(self):
         super(CrewScreen, self).__init__()
-        loadUi("crew_main.ui", self)
+        loadUi("../Ui_Files/crew_main.ui", self)
         self.crewlog.clicked.connect(self.login)
         self.crewsign.clicked.connect(self.signup)
 
@@ -50,7 +50,7 @@ class CrewScreen(QMainWindow):
 class CrewLogin(QMainWindow):
     def __init__(self):
         super(CrewLogin, self).__init__()
-        loadUi("crew_login.ui", self)
+        loadUi("../Ui_Files/crew_login.ui", self)
         self.crew_pass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter.clicked.connect(self.loginfunction)
         self.signUpButton.clicked.connect(self.signUpFunction)
@@ -84,7 +84,7 @@ class CrewLogin(QMainWindow):
 class CrewSignup(QMainWindow):
     def __init__(self):
         super(CrewSignup, self).__init__()
-        loadUi("crew_signup.ui", self)
+        loadUi("../Ui_Files/crew_signup.ui", self)
         self.crew_pass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.crew_pass1.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter.clicked.connect(self.signupfunction)
@@ -116,7 +116,7 @@ class CrewSignup(QMainWindow):
 class AdminScreen(QMainWindow):
     def __init__(self):
         super(AdminScreen, self).__init__()
-        loadUi("admin_main.ui", self)
+        loadUi("../Ui_Files/admin_main.ui", self)
         self.adminlog.clicked.connect(self.login)
         self.adminsign.clicked.connect(self.signup)
 
@@ -136,7 +136,7 @@ class AdminScreen(QMainWindow):
 class AdminLogin(QMainWindow):
     def __init__(self):
         super(AdminLogin, self).__init__()
-        loadUi("admin_login.ui", self)
+        loadUi("../Ui_Files/admin_login.ui", self)
         self.password.setEchoMode(QtWidgets.QLineEdit.Password)
         self.loginButton.clicked.connect(self.loginfunction)
         self.signUpButton.clicked.connect(self.signUpfunction)
@@ -170,7 +170,7 @@ class AdminLogin(QMainWindow):
 class AdminSignup(QMainWindow):
     def __init__(self):
         super(AdminSignup, self).__init__()
-        loadUi("admin_signup.ui", self)
+        loadUi("../Ui_Files/admin_signup.ui", self)
         self.admin_pass.setEchoMode(QtWidgets.QLineEdit.Password)
         self.admin_pass1.setEchoMode(QtWidgets.QLineEdit.Password)
         self.enter.clicked.connect(self.signupfunction)

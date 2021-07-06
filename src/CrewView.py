@@ -12,7 +12,7 @@ class CrewView(QMainWindow):
     def __init__(self, widget = None):
         self.widget = widget
         super(CrewView, self).__init__()
-        loadUi("crew_view.ui", self)
+        loadUi("../Ui_Files/crew_view.ui", self)
 
         if self.widget != None:
             self.widget.setFixedHeight(749)

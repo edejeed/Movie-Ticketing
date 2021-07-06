@@ -7,15 +7,15 @@ from AddGenre import AddGenre
 import BookingList
 import MovieList
 import CinemaList
+import AdminList
 import Genre
 import movie
-import CrewList
 from MessageBox import MessageBox
 
-class AdminList(QMainWindow):
+class CrewList(QMainWindow):
     def __init__(self, widget = None):
-        super(AdminList, self).__init__()
-        loadUi("admin.ui", self)
+        super(CrewList, self).__init__()
+        loadUi("../Ui_Files/crew.ui", self)
 
         self.widget = widget
         if self.widget != None:
@@ -33,13 +33,13 @@ class AdminList(QMainWindow):
         self.cinemaButton.clicked.connect(self.__cinemaClicked)
         self.genreButton.clicked.connect(self.__genreClicked)
         self.movieButton.clicked.connect(self.__movieButtonClicked)
-        self.crewButton.clicked.connect(self.__crewClicked)
+        self.adminButton.clicked.connect(self.__adminClicked)
         self.logoutButton.clicked.connect(self.logOut)
 
         self.loadCrew()
     
     def loadCrew(self):
-        res = GetUserList(1)
+        res = GetUserList(0)
         self.tableWidget.setRowCount(len(res))
 
         for crew in enumerate(res):
@@ -71,8 +71,8 @@ class AdminList(QMainWindow):
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
     
-    def __crewClicked(self):
-        self.a = CrewList.CrewList(self.widget)
+    def __adminClicked(self):
+        self.a = AdminList.AdminList(self.widget)
         self.widget.addWidget(self.a)
         self.widget.removeWidget(self)
 
@@ -82,10 +82,9 @@ class AdminList(QMainWindow):
         for i in range(self.widget.count()):
             self.widget.removeWidget(self.widget.widget(1))
 
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    genre = AdminList()
+    genre = CrewList()
     genre.show()
     try:
         sys.exit(app.exec_())

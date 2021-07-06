@@ -8,7 +8,7 @@ from MessageBox import MessageBox
 class AddMovie(QMainWindow):
     def __init__(self, parent = None, mode = "a", id = None):
         super(AddMovie, self).__init__(parent)
-        loadUi("add_movies.ui", self)
+        loadUi("../Ui_Files/add_movies.ui", self)
 
         self.parent = parent
         self.mode = mode
