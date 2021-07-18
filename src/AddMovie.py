@@ -86,7 +86,7 @@ class AddMovie(QMainWindow):
 
         for mgID in res:
             for gID in enumerate(self.gnrID):
-                print(f"{gID[1]} {mgID[4]}")
+                # print(f"{gID[1]} {mgID[4]}")
                 if gID[1] == mgID[4]:
                     self.genreList[gID[0]].toggle()
 

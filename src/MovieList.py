@@ -33,10 +33,27 @@ class MovieList(QMainWindow):
         self.crewButton.clicked.connect(self.__crewClicked)
         self.adminButton.clicked.connect(self.__adminClicked)
         self.logoutButton.clicked.connect(self.logOut)
+        self.delMovie.clicked.connect(self.__delClicked)
 
         self.addMovie.clicked.connect(self.__addClicked)
 
         self.id = []
+        self.loadMovieList()
+
+    def __delClicked(self):
+        if self.tableWidget.selectedItems() == []:
+            return
+
+        id = self.id[self.tableWidget.currentRow()]
+        a = MessageBox.showConfirmationMessage("Delete Movie?", "Confirmation")
+
+        if a == QtWidgets.QMessageBox.Yes:
+            try:
+                DeleteMovie(id)
+                MessageBox.showInformationMessage("Movie Deleted", "Success")
+            except Exception as e:
+                MessageBox.showInformationMessage("Movie not deleted. There are schedules associated with the movie.", "Error.")
+        
         self.loadMovieList()
     
     def __addClicked(self):

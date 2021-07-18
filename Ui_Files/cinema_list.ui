@@ -548,6 +548,45 @@ background-color: rgb(236, 236, 236);
       <bool>true</bool>
      </property>
     </widget>
+    <widget class="QPushButton" name="delCinema">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>60</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#addTicket{
+border: 1px white;
+border-radius: 10px;
+}
+
+#addTicket:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+     </property>
+     <property name="text">
+      <string>Delete Cinema</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../img/deleteTicket.png</normaloff>../img/deleteTicket.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
    </widget>
    <zorder>mainBG</zorder>
    <zorder>navigationBG</zorder>

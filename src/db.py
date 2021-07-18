@@ -222,6 +222,25 @@ def GetUserList(priv, cond = ""):
     return res
 
 #Deletes
+def DeleteMovie(id):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute("PRAGMA foreign_keys = ON")
+    cur.execute(f"DELETE FROM MovieGenre WHERE movieID = ?", (id,))
+    cur.execute(f"DELETE FROM Movie WHERE id = ?", (id,))
+
+    conn.commit()
+    conn.close()
+
+def DeleteCinema(id):
+    conn = sqlite3.connect("MovieTicketingSystem.db")
+    cur = conn.cursor()
+    cur.execute("PRAGMA foreign_keys = ON")
+    cur.execute(f"DELETE FROM Cinema WHERE id = ?", (id,))
+
+    conn.commit()
+    conn.close()
+
 def DeleteGenre(id):
     conn = sqlite3.connect("MovieTicketingSystem.db")
     cur = conn.cursor()

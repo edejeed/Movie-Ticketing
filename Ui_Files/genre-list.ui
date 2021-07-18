@@ -20,45 +20,17 @@
       <x>200</x>
       <y>120</y>
       <width>381</width>
-      <height>361</height>
+      <height>411</height>
      </rect>
     </property>
     <attribute name="horizontalHeaderStretchLastSection">
      <bool>true</bool>
     </attribute>
    </widget>
-   <widget class="QPushButton" name="deleteButton">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>490</y>
-      <width>101</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">#deleteButton{
-background-color: #ccdde8;
-border: 1px white;
-border-radius: 20px;
-}
-#deleteButton:hover{
-color:rgb(73, 147, 221);
-background-color: rgb(13, 27, 38);
-border: 1px black;
-border-radius: 20px;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>Delete</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="searchButton">
     <property name="geometry">
      <rect>
-      <x>363</x>
+      <x>350</x>
       <y>82</y>
       <width>25</width>
       <height>23</height>
@@ -88,7 +60,7 @@ border-radius: 10px;
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>211</x>
+      <x>198</x>
       <y>83</y>
       <width>141</width>
       <height>20</height>
@@ -459,7 +431,7 @@ background-color: rgb(236, 236, 236);
    <widget class="QWidget" name="rect" native="true">
     <property name="geometry">
      <rect>
-      <x>202</x>
+      <x>189</x>
       <y>77</y>
       <width>192</width>
       <height>33</height>
@@ -476,7 +448,7 @@ border-radius: 15px;
    <widget class="QPushButton" name="addGenre">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>500</x>
       <y>70</y>
       <width>101</width>
       <height>41</height>
@@ -512,13 +484,52 @@ background-color: rgb(236, 236, 236);
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QPushButton" name="delGenre">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>70</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#addTicket{
+border: 1px white;
+border-radius: 10px;
+}
+
+#addTicket:hover{
+background-color: rgb(236, 236, 236);
+}</string>
+    </property>
+    <property name="text">
+     <string>Delete Genre</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../img/deleteTicket.png</normaloff>../img/deleteTicket.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
    <zorder>rect</zorder>
    <zorder>genreList</zorder>
-   <zorder>deleteButton</zorder>
    <zorder>searchButton</zorder>
    <zorder>lineEdit</zorder>
    <zorder>navigationBG</zorder>
    <zorder>addGenre</zorder>
+   <zorder>delGenre</zorder>
   </widget>
  </widget>
  <resources/>

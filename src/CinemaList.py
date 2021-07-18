@@ -40,7 +40,25 @@ class CinemaList(QMainWindow):
         self.crewButton.clicked.connect(self.__crewClicked)
         self.adminButton.clicked.connect(self.__adminClicked)
         self.logoutButton.clicked.connect(self.logOut)
+        self.delCinema.clicked.connect(self.__deleteCinema)
         
+        self.showCinemaList()
+
+    def __deleteCinema(self):
+        if self.tableWidget.selectedItems() == []:
+            return
+
+        id = self.tableWidget.item(self.tableWidget.currentRow(), 0).text()
+
+        a = MessageBox.showConfirmationMessage("Delete Cinema?", "Confirmation")
+
+        if a == QtWidgets.QMessageBox.Yes:
+            try:
+                DeleteCinema(id)
+                MessageBox.showInformationMessage("Cinema Deleted", "Success")
+            except Exception as e:
+                MessageBox.showInformationMessage("Cinema not deleted. There are movies showing on a cinema.", "Error.")
+
         self.showCinemaList()
 
     def addCinemaClicked(self):

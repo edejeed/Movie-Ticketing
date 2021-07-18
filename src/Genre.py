@@ -29,7 +29,7 @@ class Genre(QMainWindow):
         self.genreList.setEditTriggers(QtWidgets.QTableWidget.NoEditTriggers)
         self.genreList.doubleClicked.connect(self.openInfo)
 
-        self.deleteButton.clicked.connect(self.__deleteClicked)
+        self.delGenre.clicked.connect(self.__deleteClicked)
         self.searchButton.clicked.connect(self.__searchClicked)
         self.addGenre.clicked.connect(self.__addGenreClicked)
 
@@ -60,10 +60,13 @@ class Genre(QMainWindow):
         m = MessageBox.showConfirmationMessage("Delete Genre?", "Confirmation")
         
         if(m == QtWidgets.QMessageBox.Yes):
-            DeleteGenre(id)
-            self.showGenreList()
+            try:
+                DeleteGenre(id)
+                MessageBox.showInformationMessage("Genre Deleted.", "Success")
+                self.showGenreList()
+            except Exception as e:
+                MessageBox.showInformationMessage("Unable to delete genre.", "Error")
         
-        MessageBox.showInformationMessage("Genre Deleted.", "Success")
 
     def showGenreList(self, data = []):
         if data != []:
